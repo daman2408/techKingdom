@@ -5,9 +5,7 @@ body{
 .container{
   text-align: center;
 }
-.container-fluid{
-  background-color: #fff;
-}
+
 .fa{
   color: rgb(237, 59, 59);
 }
@@ -16,7 +14,7 @@ img {
     height: auto;
 }
 .navbar-default {
-    background-color: rgba(0, 0, 0, 0.77);
+    background-color: rgba(0, 0, 0, 0.8);
     border: none;
     color: red;
 }
@@ -69,7 +67,7 @@ ul.dropdown-menu > li > a{
 }*/
 
 nav.drawer-nav{
-  background-color: rgba(0, 0, 0, 0.77);
+  background-color: rgba(0, 0, 0, 0.8);
 
 }
 a.drawer-brand{
@@ -81,7 +79,23 @@ a.drawer-menu-item{
 span.drawer-hamburger-icon{
   color: red;
 }
-.jumbotron{
+div.container-fluid#main{
+    background-image: url("http://www.samsung.com/hk_en/consumer-images/article/2014/large-tv/MainKV_without-title-0.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 0px;
+}
+.container .jumbotron, .container-fluid .jumbotron{
+  border-radius: 0px;
+}
+div.jumbotron{
   color: #fff;
   text-shadow: 1px 1px 6px rgba(230, 14, 14, 0.81);
+  text-align: center;
+  background-color:rgba(0, 0, 0, 0.8);
+  border-radius: 0px;
+  margin: 50px 0 0 0;
+}
+.jumbotron > div > h1{
+  font-size: 54px ;
 }
