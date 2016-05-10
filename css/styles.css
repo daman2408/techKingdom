@@ -1,0 +1,87 @@
+body{
+  position: relative;
+}
+
+.container{
+  text-align: center;
+}
+.container-fluid{
+  background-color: #fff;
+}
+.fa{
+  color: rgb(237, 59, 59);
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.navbar-default {
+    background-color: rgba(0, 0, 0, 0.77);
+    border: none;
+    color: red;
+}
+/*#mobile{
+  background-color: rgba(255, 255, 255, 0.95);
+}*/
+div.dropdown.pull-right{
+  right: 30px;
+}
+button#links{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+div.menu > ul{
+  position: fixed;
+  top: 52px;
+  right: -375px;
+  z-index: 1030;
+  border: 1px solid white;
+  margin-right: 15px;
+  list-style: none;
+  padding: 10px;
+  margin-right: 1px;
+
+
+}
+/*div.menu > ul{
+  list-style: none;
+
+}*/
+div.menu > ul > li{
+    text-align: left;
+}
+div.menu > ul > li > a{
+  color: #fff;
+}
+/*ul.dropdown-menu{
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0.77);
+
+}
+ul.dropdown-menu > li > a{
+    color: rgb(250, 247, 217);
+}
+.dropdown-menu{
+  margin: 0px;
+  border:none;
+  text-align: center;
+}*/
+
+nav.drawer-nav{
+  background-color: rgba(0, 0, 0, 0.77);
+
+}
+a.drawer-brand{
+  color: #fff;
+}
+a.drawer-menu-item{
+  color: #fff;
+}
+span.drawer-hamburger-icon{
+  color: red;
+}
+.jumbotron{
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(230, 14, 14, 0.81);
+}
