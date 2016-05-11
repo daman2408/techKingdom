@@ -24,6 +24,9 @@ img {
 div.dropdown.pull-right{
   right: 30px;
 }
+.drawer-hamburger{
+  margin-right: 12px;
+}
 button#links{
   background-color: transparent;
   border-color: transparent;
@@ -84,6 +87,7 @@ div.container-fluid#main{
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 0px;
+    background-size: cover;
 }
 .container .jumbotron, .container-fluid .jumbotron{
   border-radius: 0px;
@@ -98,4 +102,10 @@ div.jumbotron{
 }
 .jumbotron > div > h1{
   font-size: 54px ;
+}
+div.container-fluid#products{
+  border: 10px double red;
+  padding-top: 45px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.75);
 }
