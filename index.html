@@ -30,7 +30,7 @@
     <header role="banner" id="menu-bar" class="hidden-md hidden-lg">
       <button type="button" class="drawer-toggle drawer-hamburger">
         <span class="sr-only">toggle navigation</span>
-        <span class="drawer-hamburger-icon" style="color: red;"></span>
+        <span class="drawer-hamburger-icon"></span>
       </button>
       <nav class="drawer-nav" role="navigation">
         <ul class="drawer-menu">
@@ -114,100 +114,57 @@
 </div>
 
   <!-- PRODUCTS -->
-  <!-- <div class="container-fluid" ng-controller="productCtrl">
-    <h1 style="text-align: center;">Products</h1>
-    <div class="row">
-      <div class="col-xs-12 col-sm-4">
-        <div class="row">
-          <div class="col-sm-9 col-xs-10 col-xs-offset-1">
-            <a href="#"><img class="img-responsive " ng-src="{{products[0].image}}"></a>
-          </div>
-        </div>
-          <div>
-            <div class="container-fluid">
-              <h2>{{products[0].name}}</h2>
-              <span>{{products[0].price | currency}}</span>
-              <p>{{products[0].description}}</p>
-            </div>
-          </div>
-
-      </div>
-
-      <div class="col-xs-12 col-sm-4">
-        <div class="row">
-          <div class="col-sm-9 col-xs-10 col-xs-offset-1" >
-            <a href="#"><img class="img-responsive " ng-src="{{products[1].image}}"></a>
-          </div>
-        </div>
-          <div class="container-fluid" style=" margin-top: 40px ;">
-            <h2>{{products[1].name}}</h2>
-            <span>{{products[1].price | currency}}</span>
-            <p>{{products[1].description}}</p>
-          </div>
-      </div>
-      <div class="col-xs-12 col-sm-4">
-        <div class="row">
-          <div class="col-sm-9 col-xs-10 col-xs-offset-1" >
-            <a href="#"><img class="img-responsive " ng-src="{{products[2].image}}"></a>
-          </div>
-        </div>
-        <div class="container-fluid">
-          <h2>{{products[2].name}}</h2>
-          <span>{{products[2].price | currency}}</span>
-          <p>{{products[2].description}}</p>
-        </div>
-
-      </div>
-    </div>
-
-  </div> -->
 
         <!-- CART -->
-        <div class="container-fluid" ng-controller="myCtrl" style="margin-left: 60px; margin-right: 60px;">
-
-      <div class="row">
-
-          <div class="col-xs-offset-8 col-xs-4">
+  <div class="container-fluid" ng-controller="myCtrl" style="margin-left: 60px; margin-right: 60px;">
+    <div class="row">
+        <div class="col-xs-offset-8 col-xs-4">
           <h3>Summary <span>(ngcart-summary)</span></h3>
-
-            <ngcart-summary></ngcart-summary>
-          </div>
-          </div>
+          <ngcart-summary></ngcart-summary>
+        </div>
+    </div>
           <hr />
                <!-- <h3>Add to Cart <span>(ngcart-addtocart)</span></h3> -->
-      <div class="row">
-          <div class="col-xs-12 col-sm-4">
-              <h4>{{products[0].name}}</h4>
-              <div class="container-fluid">
-              <img ng-src="{{products[0].image}}">
-              </div>
-
-              <p> {{products[0].price | currency}}</p>
-          <ngcart-addtocart id="item1" name="{{products[0].name}}" price= "{{products[0].price}}" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4" ng-repeat="product in products">
+        <div class="product_name">
+          <span class="title"><h4>{{product.name}}</h4></span>
+        </div>
+        <div class="product_image">
+          <div class="container-fluid">
+            <img ng-src="{{product.image}}">
           </div>
-          <div class="col-xs-12 col-sm-4">
-              <h4>{{products[1].name}}</h4>
-              <div class="container-fluid">
-                <img ng-src="{{products[1].image}}">
-              </div>
-              <p> {{products[1].price | currency}}</p>
-              <ngcart-addtocart id="item2" name="{{products[1].name}}" price="{{products[1].price}}" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart>
+        </div>
+        <div class="product_buttons">
+          <ul class="buttons">
+            <li>
+          <div class="product_price">
+            <span class="price">{{product.price | currency}}</span>
           </div>
-          <div class="col-xs-12 col-sm-4">
-              <h4>{{products[2].name}}</h4>
-              <div class="container-fluid">
-                <img ng-src="{{products[2].image}}">
-              </div>
-              <p> {{products[2].price | currency}}</p>
-              <ngcart-addtocart id="{{products[2].name}}" name="{{products[2].name}}" price="{{products[2].price}}" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart>
+        </li>
+        <li>
+          <div class="product_cart_button">
+            <ngcart-addtocart id="{{product.name}}" name="{{product.name}}" price="{{product.price}}" quantity="1" quantity-max = "5">
+            Add to Cart
+            </ngcart-addtocart>
           </div>
+        </li>
+        </ul>
+        </div>
       </div>
+    </div>
+          <!-- <h4>{{product.name}}</h4>
+            <div class="container-fluid">
+              <img ng-src="{{product.image}}" alt="" />
+            </div>
+            <p>
+              {{product.price | currency}}
+            </p>
+            <ngcart-addtocart id="{{product.name}}" name="{{product.name}}" price="{{product.price}}" quantity="1" quantity-max = "5">Add to Cart</ngcart-addtocart> -->
 
           <hr/>
-          <h3>Cart <span> (ngcart-cart)</span></h3>
-
-          <ngcart-cart></ngcart-cart>
-
+            <h3>Cart <span> (ngcart-cart)</span></h3>
+            <ngcart-cart></ngcart-cart>
           <hr/>
 
       <div class="row">
