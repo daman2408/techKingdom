@@ -27,6 +27,11 @@ div.dropdown.pull-right{
 .drawer-hamburger{
   margin-right: 12px;
 }
+div.round{
+  background-color: rgb(221, 50, 50);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
 button#links{
   background-color: transparent;
   border-color: transparent;
@@ -104,7 +109,8 @@ div.jumbotron{
   font-size: 54px ;
 }
 div.container-fluid#products{
-  border: 10px double red;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
   padding-top: 45px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.75);
@@ -112,4 +118,25 @@ div.container-fluid#products{
 div.product_image{
   height: 245px;
   width: 275px;
+}
+ul.buttons{
+  list-style: none;
+}
+div.product_cart_button{
+  padding: 10px;
+}
+div.product_price{
+  border-radius: 50%;
+  background-color: rgba(181, 7, 7, 0.85);
+  display: block;
+  color: #fff;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  top: -40px;
+  line-height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;
+}
+section.detail_page{
+  margin-top: 50px;
 }

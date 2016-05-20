@@ -1,0 +1,116 @@
+<div class="">
+  <div class="container-fluid" id="main">
+    <div class="jumbotron">
+        <h1>Welcome to TechKingdom</h1>
+          <p>
+            Are you sick of paying a ton of money to your TV provider? We can offer a cheap alternative: IPTV Box.
+          </p>
+      </div>
+
+
+    <!-- CAROUSEL -->
+    <div class="container-fluid" id="carousel" style="background-color: rgba(0, 0, 0, 0.8)">
+    <div class="container" style="padding-top: 60px; background-color: black;">
+      <div class="row">
+        <section class="col-sm-12">
+          <div class="carousel slide" data-ride="carousel" id="featured">
+            <div class="carousel-inner">
+  <!-- first image in carousel -->
+              <div class="item active">
+                <img src="https://i.ytimg.com/vi/MXxDWNt-mNw/maxresdefault.jpg" alt="avov-example">
+                <div class="carousel-caption">
+
+                    <h2>Movies</h2>
+                    <p>Endless catalogue including latest releases.</p>
+                </div>
+              </div>
+  <!-- second image -->
+              <div class="item" style="background-color:rgba(0, 0, 0, 0.54)">
+                <img src="http://www.skyviewelectronics.com/sites/skyviewelectronics.com/files/avov-online-tv-screen.jpg">
+                <div class="carousel-caption">
+                  <h1>Live TV</h1>
+                    <p>Access to all of your favourite television channels.</p>
+                </div>
+              </div>
+  <!-- THIRD IMAGE -->
+              <div class="item" style="background-color:rgba(0, 0, 0, 0.54)">
+                <img src="./images/showbox.jpg">
+                <div class="carousel-caption">
+                  <h1>Live TV</h1>
+                    <p>Access to all of your favourite television channels.</p>
+                </div>
+              </div>
+
+            </div> <!--carousel-inner-->
+            <a class="left carousel-control" href="#featured" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span></a>
+
+              <a class="right carousel-control" href="#featured" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span></a>
+          </div><!--carousel-->
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANDROID/IPTV INFO -->
+    <div class="container-fluid" id="products">
+      <div class="row"style="border-bottom: 1px solid red;">
+        <div class="col-sm-6">
+          <i class="fa fa-android fa-5x" aria-hidden="true"></i>
+          <h2>Android Box</h2>
+          <p>Add the ultimate entertainment device to your TV. Android boxes instantly turn your regular television into a SMART TV giving you the ability to surf the internet, watch videos on YouTube, check your facebook status all from your TV.
+        </div>
+        <div class="col-sm-6">
+          <i class="fa fa-television fa-5x" aria-hidden="true"></i>
+          <h2>IPTV Service</h2>
+          <p>FREE TV. Is there anything else that needs to be said? Android boxes are the ultimate alternative to the     high-priced tv subscriptions we have all had enough of.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- PRODUCTS -->
+
+          <!-- CART -->
+    <div class="container-fluid" ng-controller="myCtrl" style="margin-left: 60px; margin-right: 60px;">
+      <div class="row">
+          <div class="col-xs-offset-8 col-xs-4">
+            <a href="#home/cart"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
+            <ngcart-summary></ngcart-summary>
+          </div>
+      </div>
+            <hr />
+                 <!-- <h3>Add to Cart <span>(ngcart-addtocart)</span></h3> -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-4" ng-repeat="product in products">
+          <div class="product_name">
+          <span class="title"><h4>{{product.name}}</h4></span>
+          </div>
+          <a href="#/details/{{products.indexOf(product)}}">
+            <div class="product_image">
+              <div class="container-fluid">
+                <img ng-src="{{product.image}}">
+              </div>
+            </div>
+          </a>
+          <div class="product_buttons">
+            <ul class="buttons">
+              <li>
+            <div class="product_price">
+              <p class="price" style="top: -40px;">{{product.price | currency}}</p>
+            </div>
+          </li>
+          <li>
+            <div class="product_cart_button">
+              <ngcart-addtocart id="{{product.name}}" name="{{product.name}}" price="{{product.price}}" quantity="1" quantity-max = "5">
+              Add to Cart
+              </ngcart-addtocart>
+            </div>
+          </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+                <a href="#home/cart">Cart</a>
+</div>
