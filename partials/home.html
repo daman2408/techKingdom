@@ -1,4 +1,4 @@
-<div class="">
+
   <div class="container-fluid" id="main">
     <div class="jumbotron">
         <h1>Welcome to TechKingdom</h1>
@@ -6,6 +6,8 @@
             Are you sick of paying a ton of money to your TV provider? We can offer a cheap alternative: IPTV Box.
           </p>
       </div>
+    </div>
+
 
 
     <!-- CAROUSEL -->
@@ -34,7 +36,7 @@
               </div>
   <!-- THIRD IMAGE -->
               <div class="item" style="background-color:rgba(0, 0, 0, 0.54)">
-                <img src="./images/showbox.jpg">
+                <img src="../images/showbox.jpg">
                 <div class="carousel-caption">
                   <h1>Live TV</h1>
                     <p>Access to all of your favourite television channels.</p>
@@ -53,6 +55,7 @@
     </div>
   </div>
 
+
   <!-- ANDROID/IPTV INFO -->
     <div class="container-fluid" id="products">
       <div class="row"style="border-bottom: 1px solid red;">
@@ -68,49 +71,5 @@
         </div>
       </div>
     </div>
-  </div>
 
-    <!-- PRODUCTS -->
-
-          <!-- CART -->
-    <div class="container-fluid" ng-controller="myCtrl" style="margin-left: 60px; margin-right: 60px;">
-      <div class="row">
-          <div class="col-xs-offset-8 col-xs-4">
-            <a href="#home/cart"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
-            <ngcart-summary></ngcart-summary>
-          </div>
-      </div>
-            <hr />
-                 <!-- <h3>Add to Cart <span>(ngcart-addtocart)</span></h3> -->
-      <div class="row">
-        <div class="col-xs-12 col-sm-4" ng-repeat="product in products">
-          <div class="product_name">
-          <span class="title"><h4>{{product.name}}</h4></span>
-          </div>
-          <a href="#/details/{{products.indexOf(product)}}">
-            <div class="product_image">
-              <div class="container-fluid">
-                <img ng-src="{{product.image}}">
-              </div>
-            </div>
-          </a>
-          <div class="product_buttons">
-            <ul class="buttons">
-              <li>
-            <div class="product_price">
-              <p class="price" style="top: -40px;">{{product.price | currency}}</p>
-            </div>
-          </li>
-          <li>
-            <div class="product_cart_button">
-              <ngcart-addtocart id="{{product.name}}" name="{{product.name}}" price="{{product.price}}" quantity="1" quantity-max = "5">
-              Add to Cart
-              </ngcart-addtocart>
-            </div>
-          </li>
-          </ul>
-          </div>
-        </div>
-      </div>
-                <a href="#home/cart">Cart</a>
-</div>
+  

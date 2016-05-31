@@ -21,7 +21,7 @@
             <span class="small_grey">{{products[whichItem].modelNumber}}</span>
           </div>
         </div>
-        <div class="hidden-xs col-md-3">
+        <div class="hidden-xs col-md-3 pull-right">
           <div class="productRating">
             <span class="small_grey">Rate this product:</span>
             <i class="fa fa-star-o" aria-hidden="true"></i>
@@ -49,17 +49,20 @@
              <!-- ng-src="{{products[whichItem].logo}}" -->
           </div>
           <div class="carousel-main-wrapper">
-            <div class="carousel-inner-wrap">
-              <div class="carousel-inner" style="width: 500px;">
-                <ul class="carousel-images" style="width: 2000px;">
-                  <li class="carousel-list active-slide"><img class="slide-image" src="http://electronicspro.ca/images/2_medium.png"></li>
-                  <li class="carousel-list"><img class="slide-image" src="http://nerdjunkie.com/i20/wp-content/uploads/2016/04/cfa93663a18c.jpg"></li>
-                </ul>
+            <div class="carousel-inner-wrap cf">
+              <div class="carousel-inner cf" style="width: 500px;">
+                  <ul class="carousel-images">
+                    <li class="carousel-list active-slide"><img class="slide-image" src="http://electronicspro.ca/images/2_medium.png"></li>
+                    <li class="carousel-list"><img class="slide-image" src="http://nerdjunkie.com/i20/wp-content/uploads/2016/04/cfa93663a18c.jpg"></li>
+                  </ul>
+
                 <div class="carousel-controls" style="display: hide;">
                   <i id="prevImage" class="fa fa-chevron-left fa-2x chevron" aria-hidden="true"></i>
                   <i id="nextImage" class="fa fa-chevron-right fa-2x chevron" aria-hidden="true"></i>
                 </div>
+                <div class="cf"></div>
               </div>
+              <div class="cf"></div>
             </div>
             <div class="carousel-counter">
               <span class="current">1</span>
@@ -132,23 +135,22 @@
     <h2>Product Description</h2>
     <ul class="nav nav-tabs">
       <li class="active"><a data-toggle="tab" href="#overview">Overview</a></li>
-      <li><a data-toggle="tab" href="#features">Features/Details</a></li>
+      <li><a data-toggle="tab" href="#feature">Features/Details</a></li>
     </ul>
   <div class="content" style="width: 100%; height: 230px; overflow: scroll;">
     <div class="tab-content">
       <div id="overview" class="tab-pane fade in active">
         <h3>Overview</h3>
-        <h4>TVONLINE+ IPTV SET-TOP BOX</h4>
+        <h4>{{TVONLINE+ IPTV SET-TOP BOX}}</h4>
         <p>TVonline+ is our premium IPTV/OTT Android set top box. With our manufacturing business in Honk Kong, R&D business in Korea and a sales office in Toronto, Canada and Los Angeles, USA. Over the past couple of years, we have put together a dedicated team that specializes in the design production and maintenance of our hardware and middleware support for the IPTV/OTT set top boxes we manufacture. We target operators in the market who use and provide dedicated over IP-based networks (IPTV, OTT, VOD). This device comes pre-loaded with our Nova Middleware for easy convenience and deployment for the end-user. With more ram, strong processor it allows you to enhance the velocity of the set top box. The benefits of HEVC technology used in TVonline+ is that it requires smaller network bandwidth for provision of high quality video. TVonline+ comes equipped with a built-in WiFi and the ability to turn the STB into a internet hotspot.</p>
+      </div>
+      <div id="feature" class="tab-pane fade">
+        <h3>Features/Specs</h3>
+          <h4>{{products[whichItem].name}}</h4>
+          <p>
+
+          </p>
       </div>
       </div>
   </div>
-      <div id="menu2" class="tab-pane fade">
-        <h3>Menu 2</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-      </div>
-      <div id="menu3" class="tab-pane fade">
-        <h3>Menu 3</h3>
-        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-      </div>
     </div>

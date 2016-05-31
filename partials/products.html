@@ -1,0 +1,46 @@
+<!-- PRODUCTS -->
+<!-- CART -->
+<div class="container-fluid" id="front-page-products" ng-controller="myCtrl" >
+<div class="row">
+    <div class="col-xs-offset-8 col-xs-4">
+      <a href="#home/cart"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
+      <ngcart-summary></ngcart-summary>
+    </div>
+</div>
+      <hr />
+           <!-- <h3>Add to Cart <span>(ngcart-addtocart)</span></h3> -->
+<div class="row">
+  <div class="products">
+    <div class="col-xs-12 col-sm-4" ng-repeat="product in products">
+      <div class="product_name">
+      <span class="title">{{product.name}}</span>
+      </div>
+      <a href="#/details/{{products.indexOf(product)}}">
+        <div class="product_image">
+          <div class="container-fluid">
+            <img class= "homePageImage" ng-src="{{product.image}}">
+          </div>
+        </div>
+      </a>
+      <div class="product_buttons">
+        <ul class="buttons">
+          <li>
+        <div class="product_price">
+          <p class="price" style="top: -40px;">{{product.price | currency}}</p>
+        </div>
+      </li>
+      <li>
+        <div class="product_cart_button">
+          <ngcart-addtocart id="{{product.name}}" name="{{product.name}}" price="{{product.price}}" quantity="1" quantity-max = "5">
+          Add to Cart
+          </ngcart-addtocart>
+        </div>
+      </li>
+      </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+          <a href="#home/cart">Cart</a>
+</div>

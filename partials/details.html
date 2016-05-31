@@ -1,12 +1,235 @@
-<section class="detail_page">
-  <div class="container-fluid" ng-model="product">
-    <h1>{{products[whichItem].name}}</h1>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 col-sm-3">
-          <img ng-src="{{products[whichItem].image}}" alt="" />
-        </div>
+
+
+<div class="mainWrap" style="background-color: white;">
+<div class="container-fluid content-wrap">
+  <div class="container-fluid" style="border-bottom: 3px solid rgb(152, 152, 152);">
+    <div class="row">
+      <div class="col-xs-12">
+        <ol class="breadcrumb" style="margin-bottom: 5px;">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li class="active">{{products[whichItem].name}}</li>
+        </ol>
       </div>
     </div>
   </div>
-</section>
+  <!-- BREADCRUMBS END -->
+      <!-- PRODUCT TITLE -->
+  <div class="container-fluid" style="border-bottom: 2px solid rgb(152, 152, 152);">
+    <div class="row titleBar">
+        <div class="col-xs-9 productName">
+          <div class="productTitle">
+            <h3 style="margin-bottom: 0;">{{products[whichItem].name}}</h3>
+            <span class="small_grey">{{products[whichItem].modelNumber}}</span>
+          </div>
+        </div>
+        <div class="hidden-xs col-md-3">
+          <div class="productRating" style="display: inline-block;">
+            <span class="small_grey">Rate this product:</span>
+            <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+          </div>
+          <div style="clear: both;"></div>
+        </div>
+
+      </div>
+      <!-- END OF ROW -->
+    </div>
+    <!-- PRODUCT TITLE BAR ENDS -->
+
+  <!-- MAIN PRODUCT  -->
+  <div class="container-fluid mainProduct">
+    <div class="product-wrapper">
+      <div class="row">
+        <div class="col-xs-12 col-sm-7">
+          <!-- PRODUCT IMAGE/LOGO/CAROUSEL -->
+          <div class="productLogo clear-fix">
+            <span class="logo"><a href="http://avov.tv/"><img
+                     src="https://lh6.googleusercontent.com/-Nekw9YHme20/AAAAAAAAAAI/AAAAAAAAAPw/RYA86SdnzVg/photo.jpg" width="100px" /></a></span>
+             <!-- ng-src="{{products[whichItem].logo}}" -->
+          </div>
+          <div class="carousel-main-wrapper">
+            <div class="carousel-inner-wrap">
+              <div class="carousel-inner">
+                  <ul class="carousel-images">
+                    <li class="carousel-list active-slide"><img class="slide-image" ng-src="{{products[whichItem].image}}"></li>
+                    <li class="carousel-list"><img class="slide-image" src="http://nerdjunkie.com/i20/wp-content/uploads/2016/04/cfa93663a18c.jpg"></li>
+                  </ul>
+                  <div class="cf"></div>
+                <div class="carousel-controls" style="display: hide;">
+                  <i id="prevImage" class="fa fa-chevron-left fa-2x chevron" aria-hidden="true"></i>
+                  <i id="nextImage" class="fa fa-chevron-right fa-2x chevron" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-counter">
+              <span class="current">1</span>
+               of
+              <span class="total">2</span>
+            </div>
+            <div class="carousel-preview-images">
+              <div class="carousel-inner-preview">
+                <ul class="preview-images" ng-repeat="product in products">
+                  <li>
+                    <div class="overlay-wrapper">
+                      <img class="preview_slider thumbnail" src="http://electronicspro.ca/images/2_medium.png"/>
+                    </div>
+                </li>
+                    <li>
+                      <div class="overlay-wrapper">
+                        <img class="preview_slider thumbnail" src="https://lh6.googleusercontent.com/-Nekw9YHme20/AAAAAAAAAAI/AAAAAAAAAPw/RYA86SdnzVg/photo.jpg"/>
+                      </div>
+                  </li>
+
+                <li>
+                  <div class="overlay-wrapper">
+                    <img class="preview_slider thumbnail" src="http://nerdjunkie.com/i20/wp-content/uploads/2016/04/cfa93663a18c.jpg"/>
+                  </div>
+              </li>
+                </ul>
+              </div>
+              <div class="carousel-preview-controls">
+                <span class="prevArrow"></span>
+                <span class="nextArrow"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-5">
+          <div class="purchase_info clear-fix">
+            <div class="priceInfo">
+              <div class="shipping clear-fix">
+                <span id="shipAndSold">Shipped and Sold by: Tech Kingdom</span>
+              </div>
+              <div>
+                <div class="price" style="float: left; text-align: center; padding: 0 15px; width: 50%">
+                  <span id="priceTag">{{products[whichItem].price | currency}}</span>
+                </div>
+                <div class="clear-fix" style="float: right; padding: 0 15px; width: 50%; border-left: dotted 1px gray">
+                  <ul id="returns">
+                    <li><a href="#">Free Shipping for orders over $200</a></li>
+                    <li><a href="#">Easy Returns</a></li>
+                  </ul>
+                </div>
+  <div style="clear: both;"></div>
+              </div>
+            </div>
+            <div class="ad_space" style="text-align: center;">
+              <span id="forAd" style="font-size: 60px;">Ad Space</span>
+            </div>
+            <div class="buyingOptions">
+                <button class="btn btn-primary" id="addToCart" name="button">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CAROUSEL SECTION ENDS -->
+        <!-- PRICE/CART BUTTON ENDS -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container product-description" style="overflow: hidden;">
+    <div id="product-description">
+      <h2>Product Description</h2>
+      <ul class="nav nav-tabs">
+        <li class="active" role="presentation"><a data-toggle="tab">Overview</a></li>
+      </ul>
+    <div class="content" style="width: 100%; overflow: scroll;">
+      <div class="tab-content">
+        <div id="overview" class="tab-pane fade in active">
+          <h3>Overview</h3>
+          <h4>{{products[whichItem].name}}</h4>
+          <p>{{products[whichItem].description}}</p>
+          <br>
+          <h3>Features/Specs</h3>
+          <!-- PRODUCT LIST STARTS -->
+          <div class="container-fluid" style="position: relative; top: 15px;">
+            <div class="content-wrapper">
+              <ul id="productList">
+                <li class="row productList alt">
+                  <span class="col-md-5 featureName">CPU</span>
+                  <span class="col-md-7 feature">{{products[whichItem].productInfo.CPU}}</span>
+                </li>
+                <li class="row productList">
+                  <span class="col-md-5 featureName">Feature Name</span>
+                  <span class="col-md-7 feature">Feature</span>
+                </li>
+                <li class="row productList alt">
+                  <span class="col-md-5 featureName">Feature Name</span>
+                  <span class="col-md-7 feature">Feature</span>
+                </li>
+                <li class="row productList">
+                  <span class="col-md-5 featureName">Feature Name</span>
+                  <span class="col-md-7 feature">Feature</span>
+                </li>
+              </ul>
+              <div class="cf"></div>
+            </div>
+          </div>
+  <!-- PRODUCT LIST ENDS -->
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="cf"></div>
+  </div>
+<!-- // Product Description Ends -->
+</div>
+
+
+    <script type="text/javascript">
+    var main = function() {
+
+      $('.carousel-inner').mouseenter(function(){
+        $(".chevron").fadeIn(1000);
+      }).mouseleave(function(){
+        $('.chevron').fadeOut(1000);
+      });
+
+      // WHEN WE CLICK FOR IMAGE
+
+      var currentSlide = $('.active-slide');
+      var nextSlide = currentSlide.next();
+      var prevSlide = nextSlide.prev();
+
+      // CLICK FOR NEXT IMAGE
+
+          $('i#nextImage').click(function(){
+            var currentSlide = $('.active-slide');
+            var nextSlide = currentSlide.next();
+
+            if(nextSlide.length === 0) {
+              nextSlide = $('.carousel-list').first();
+            }
+
+            $('ul.carousel-images').animate({
+              left: '-=500px'}, 300, function(){} );
+              currentSlide.removeClass('active-slide');
+              nextSlide.addClass('active-slide');
+          });
+            // CLICK FOR PREV IMAGE
+        $('i#prevImage').click(function(){
+          var currentSlide = $('.active-slide');
+          var prevSlide = currentSlide.prev();
+
+          if (prevSlide.length === 0) {
+            prevSlide = $('.carousel-list').last();
+          }
+
+          $('ul.carousel-images').animate({
+            left: '+=500px'}, 300, function(){} );
+          nextSlide.removeClass('active-slide');
+          prevSlide.addClass('active-slide');
+      });
+
+
+
+
+    }
+
+    $(document).ready(main);
+    </script>
