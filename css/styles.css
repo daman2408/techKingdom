@@ -193,13 +193,6 @@ div.productLogo{
   margin-top: 20px;
 }
 
-div.carousel-inner{
-  width: 500px;
-  overflow: hidden;
-  position: relative;
-
-}
-
 ul{
   list-style: none;
 }
