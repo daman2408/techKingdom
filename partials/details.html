@@ -1,19 +1,5 @@
-
-
-<div class="mainWrap" style="background-color: white;">
-<div class="container-fluid content-wrap">
-  <div class="container-fluid" style="border-bottom: 3px solid rgb(152, 152, 152);">
-    <div class="row">
-      <div class="col-xs-12">
-        <ol class="breadcrumb" style="margin-bottom: 5px;">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li class="active">{{products[whichItem].name}}</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <!-- BREADCRUMBS END -->
+<div class="mainWrap" style="background-color: white; position: relative; padding-top: 50px;">
+<div class="container-fluid content-wrap" style="position: relative; top: 50px;">
       <!-- PRODUCT TITLE -->
   <div class="container-fluid" style="border-bottom: 2px solid rgb(152, 152, 152);">
     <div class="row titleBar">
@@ -53,16 +39,30 @@
           </div>
           <div class="carousel-main-wrapper">
             <div class="carousel-inner-wrap">
-              <div class="carousel-inner">
-                <ul class="carousel-images">
-                  <li><img ng-src="{{products[whichItem].image}}" class="slide-image" /></li>
-                </ul>
+              <div class="carousel-inner" id="idk" style="width: 500px; position: relative; ;">
+                <div class="image-wrap" style="position: relative; overflow: hidden; width: 500px;">
+                  <div class="carousel-images activ">
+                    <img class="slider" ng-src="{{products[whichItem].image}}" alt="" />
+                    <div class="cf"></div>
+                  </div>
 
-                  <div class="cf"></div>
-                <div class="carousel-controls" style="display: hide;">
+                  <div class="carousel-images">
+                    <img class="slider" src="../images/back.png" alt="" />
+                    <div class="cf"></div>
+                  </div>
+
+                  <div class="carousel-images">
+                    <img class="slider" src="../images/frontrcu.png" alt="" />
+                    <div class="cf"></div>
+                  </div>
+
+                </div>
+
+                <div class="carousel-controls">
                   <i id="prevImage" class="fa fa-chevron-left fa-2x chevron" aria-hidden="true"></i>
                   <i id="nextImage" class="fa fa-chevron-right fa-2x chevron" aria-hidden="true"></i>
                 </div>
+                <div class="cf"></div>
               </div>
             </div>
             <div class="carousel-counter">
@@ -132,7 +132,7 @@
     </div>
   </div>
 
-  <div class="container product-description" style="overflow: hidden;">
+  <div class="container product-description" style="overflow: hidden; position: relative; padding-top: 75px;" >
     <div id="product-description">
       <h2>Product Description</h2>
       <ul class="nav nav-tabs">
@@ -179,57 +179,42 @@
   </div>
 <!-- // Product Description Ends -->
 </div>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.carousel-inner').mouseenter(function(){
+    $(".chevron").fadeIn(1000);
+  }).mouseleave(function(){
+    $('.chevron').fadeOut(1000);
+  });
+  $('.carousel-counter').click(function() {
+    console.log("hello there");
+  });
+  $('#nextImage').click(function() {
 
+    var currentSlide = $('.activ');
+    var nextSlide = currentSlide.next();
 
-    <script type="text/javascript">
-    var main = function() {
-
-      $('.carousel-inner').mouseenter(function(){
-        $(".chevron").fadeIn(1000);
-      }).mouseleave(function(){
-        $('.chevron').fadeOut(1000);
-      });
-
-      // WHEN WE CLICK FOR IMAGE
-
-      var currentSlide = $('.active-slide');
-      var nextSlide = currentSlide.next();
-      var prevSlide = nextSlide.prev();
-
-      // CLICK FOR NEXT IMAGE
-
-          $('i#nextImage').click(function(){
-            var currentSlide = $('.active-slide');
-            var nextSlide = currentSlide.next();
-
-            if(nextSlide.length === 0) {
-              nextSlide = $('.carousel-list').first();
-            }
-
-            $('ul.carousel-images').animate({
-              left: '-=500px'}, 300, function(){} );
-              currentSlide.removeClass('active-slide');
-              nextSlide.addClass('active-slide');
-          });
-            // CLICK FOR PREV IMAGE
-        $('i#prevImage').click(function(){
-          var currentSlide = $('.active-slide');
-          var prevSlide = currentSlide.prev();
-
-          if (prevSlide.length === 0) {
-            prevSlide = $('.carousel-list').last();
-          }
-
-          $('ul.carousel-images').animate({
-            left: '+=500px'}, 300, function(){} );
-          nextSlide.removeClass('active-slide');
-          prevSlide.addClass('active-slide');
-      });
-
-
-
-
+    if(nextSlide.length == 0) {
+      nextSlide = $('.carousel-images').first();
     }
 
-    $(document).ready(main);
-    </script>
+    currentSlide.removeClass('activ');
+    nextSlide.addClass('activ');
+  });
+
+  $('#prevImage').click(function() {
+
+    var currentSlide = $('.activ');
+    var prevSlide = currentSlide.prev();
+
+    if(prevSlide.length == 0) {
+      prevSlide = $('.carousel-images').last();
+    }
+
+    currentSlide.removeClass('activ');
+    prevSlide.addClass('activ');
+  });
+
+});
+
+</script>

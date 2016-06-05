@@ -1,24 +1,25 @@
-var app = angular.module("techKingdom", ['ngCart', 'ngRoute']);
+var app = angular.module("techKingdom", ['ngCart', 'ngRoute'])
 
 app.config(['$routeProvider', function($routeProvider){
   $routeProvider.
   when('/home', {
     templateUrl: '../partials/home.html',
     controller: 'myCtrl'
-  })
-  .when('/home/:cart', {
+  }).
+
+  when('/home/:cart', {
     templateUrl: '../partials/cart.html',
     controller: 'myCtrl'
-  })
-  .when('/details/:itemId', {
+  }).
+  when('/details/:itemId', {
     templateUrl: '../partials/details.html',
     controller: 'myCtrl'
-  })
-  .when('/:products', {
+  }).
+  when('/:products', {
     templateUrl: '../partials/products.html',
     controller: 'myCtrl'
-  })
-  .otherwise({
+  }).
+  otherwise({
     redirectTo: '/home'
   });
 }])
@@ -29,6 +30,14 @@ app.controller ('myCtrl', ['$scope', '$http', 'ngCart', '$routeParams', function
     $scope.itemsPage = $routeParams.products
     $scope.cart = $routeParams.cart;
     $scope.whichItem = $routeParams.itemId;
+    $scope.payPalSettings = {
+        paypal: {
+            business: "damanvir32@gmail.com",
+            item_name: "Order",
+            item_number: "item_number",
+            currency_code: "CAD"
+        }
+      };
     $scope.products = [{
       name: "Avov IPTV Box",
       image: "./images/avov-front.png",

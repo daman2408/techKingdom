@@ -3,8 +3,15 @@
 <div class="container-fluid" id="front-page-products" ng-controller="myCtrl" >
 <div class="row">
     <div class="col-xs-offset-8 col-xs-4">
-      <a href="#home/cart"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
-      <ngcart-summary></ngcart-summary>
+      <div class="shoppingCartStatus">
+        <div class="shoppingCartButton">
+          <a href="#home/cart"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
+        </div>
+        <div class="shoppingCartSummary">
+          <ngcart-summary></ngcart-summary>
+        </div>
+      </div>
+      <div class="cf"></div>
     </div>
 </div>
       <hr />

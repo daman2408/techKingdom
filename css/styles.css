@@ -1,16 +1,10 @@
-body{
-}
 
 div.page-wrap{
   margin: 0;
   padding: 0;
   width: 100%;
   position: relative;
-  background-image: url("http://www.samsung.com/hk_en/consumer-images/article/2014/large-tv/MainKV_without-title-0.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-
+  background: transparent;
 }
 div.cf{
   clear: both;
@@ -31,6 +25,9 @@ img.homePageImage {
     background-color: rgba(0, 0, 0, 0.8);
     border: none;
     color: red;
+}
+ul.desktopNav > li > a{
+  color: white;
 }
 /*#mobile{
   background-color: rgba(255, 255, 255, 0.95);
@@ -74,19 +71,6 @@ div.menu > ul > li{
 div.menu > ul > li > a{
   color: #fff;
 }
-/*ul.dropdown-menu{
-  border-radius: 0px;
-  background-color: rgba(0, 0, 0, 0.77);
-
-}
-ul.dropdown-menu > li > a{
-    color: rgb(250, 247, 217);
-}
-.dropdown-menu{
-  margin: 0px;
-  border:none;
-  text-align: center;
-}*/
 
 nav.drawer-nav{
   background-color: rgba(0, 0, 0, 0.8);
@@ -101,6 +85,18 @@ a.drawer-menu-item{
 span.drawer-hamburger-icon{
   color: red;
 }
+div.home-wrap{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  background-image: url("../images/television.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+}
 div.container-fluid#main{
 margin: 0;
 padding: 0;
@@ -113,9 +109,10 @@ div.jumbotron{
   color: #fff;
   text-shadow: 1px 1px 6px rgba(230, 14, 14, 0.81);
   text-align: center;
-  background-color:rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 0px;
   margin: 50px 0 0 0;
+  height: 755px;
   width: 100%;
 }
 .jumbotron > div > h1{
@@ -134,6 +131,16 @@ div.container-fluid#products{
 div#front-page-products.container-fluid{
   background-color: white;
   margin: 0;
+  position: relative;
+  top: 50px;
+}
+div.shoppingCartStatus{
+  position: relative;
+  float: right;
+}
+div.shoppingCartStatus > div{
+  display: inline-block;
+  padding: 10px;
 }
 div.products{
   position: relative;
@@ -196,27 +203,62 @@ div.productLogo{
 ul{
   list-style: none;
 }
-ul.carousel-images{
+/*ul.carousel-images{
   width: 1000px;
   height: 500px;
   position: relative;
   padding: 0;
   margin: 0;
+}*/
+div.carousel-images{
+  width: 500px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  float: left;
+  display: none;
+  overflow: hidden;
 }
-li.carousel-list{
+div.activ{
+  display: block;
+  width: 500px;
+  float: left;
+  position: relative;
+}
+img.slider{
+  width: 500px;
+  height: 500px;
+  float: left;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+
+}
+
+/*li.carousel-list{
   list-style: none;
   width: 500px;
   float: left;
+  position: relative;
 }
 li.active-slide{
   display: block;
 }
 img.slide-image{
   width: 500px;
-}
+}*/
 span.logo{
   float: left;
   width: 150px;
+}
+div.carousel-controls{
+  position: absolute;
+  top: 0px;
+  width: 500px;
+  height: 500px;
+  z-index: 1;
+  background-color: transparent;
+
 }
 i{
   color: red;
@@ -227,9 +269,8 @@ i#prevImage{
   left: 0;
   overflow: hidden;
   position: absolute;
-  top: 210px;
+  top: 50%;
   width: 42px;
-  : 10;
   border: none;
   background: transparent;
   display: none;
@@ -238,11 +279,10 @@ i#prevImage{
 i#nextImage{
   height: 80px;
   width: 42px;
-  right: -10px;
+  right: -20px;
   overflow: hidden;
   position: absolute;
-  top: 210px;
-  : 10;
+  top: 50%;
   border: none;
   background: transparent;
   display: none;
@@ -377,6 +417,9 @@ footer{
   border-top: 1px solid;
   top: 300px;
 }
+
+/*// Product Page //*/
+
 
 
 @media (min-width: @screen-sm-min) {
