@@ -1,0 +1,28 @@
+{
+  "name": "techkingdom",
+  "version": "1.0.0",
+  "description": "IPTV website",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "git": "^0.1.5",
+    "iscroll": "^5.2.0",
+    "jquery": "^2.2.3",
+    "jquery-drawer": "^3.2.0",
+    "lodash": "^4.11.1",
+    "jekyll": "^3.0",
+    "ruby": "^0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "iptv",
+    "android"
+  ],
+  "author": "DamCity",
+  "license": "ISC"
+}
