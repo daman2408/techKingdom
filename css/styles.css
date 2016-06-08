@@ -1,4 +1,6 @@
-
+body{
+  font-family: 'Merriweather', serif;
+}
 div.page-wrap{
   margin: 0;
   padding: 0;
@@ -61,10 +63,7 @@ div.menu > ul{
 
 
 }
-/*div.menu > ul{
-  list-style: none;
 
-}*/
 div.menu > ul > li{
     text-align: left;
 }
@@ -116,9 +115,9 @@ div.jumbotron{
   width: 100%;
 }
 .jumbotron > div > h1{
-  font-size: 4em;
-  font-family: 'Julius Sans One', sans-serif;
-  font-weight: 900;
+font-size: 4em;
+font-family: 'Montserrat', sans-serif;
+font-weight: 900;
 }
 div.item > img{
   width: 100%;
@@ -262,11 +261,16 @@ div.carousel-controls{
   background-color: transparent;
 
 }
-i#android{
+i.white{
   color: white;
+  text-align: center;
+}
+i.fa-6{
+  font-size: 15em;
 }
 i#tv{
   color: rgb(44, 22, 227);
+  text-align: center;
 }
 
 i#prevImage{

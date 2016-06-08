@@ -1,3 +1,4 @@
+
 div.learnMoreButton{
   position: relative;
   top: 180px;
@@ -20,34 +21,31 @@ button.btn-lg > a {
   color: #fff;
   font-size: 30px;
 }
-div.features-wrap{
-  background-image: url("../images/ufc.jpg"); background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 500px;
-  border-bottom: solid 3px red;
+div#products{
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, rgb(44, 22, 227), rgb(98, 33, 219)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, rgb(44, 22, 227), rgb(98, 33, 219)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, rgb(44, 22, 227), rgb(98, 33, 219)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, rgb(44, 22, 227), rgb(98, 33, 219)); /* Standard syntax */
 }
-div#onlineStreaming{
-  min-height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
 
+div.feature-container{
+  background: transparent;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
 }
-div.benefitsImage{
-  padding: 20px;
+div.title{
   position: relative;
+  top: 150px;
+}
+h2.feature-title{
+  font-size: 5em;
+}
+div.benefits_description{
+  padding: 0 60px;
+}
 
-}
-div.benefitsImage > img{
-  width: 350px;
-  height: auto;
-}
-@media (max-width: @screen-xs-max) {
-  div.features-wrap{
-    background-color: red;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 500px;
-    border-bottom: solid 3px red;
-  }
+span.benefits_description{
+  font-size: 1.7em;
 }

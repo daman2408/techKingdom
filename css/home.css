@@ -31,11 +31,21 @@ div#products{
 
 div.feature-container{
   background: transparent;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+div.title{
+  position: relative;
+  top: 150px;
 }
 h2.feature-title{
   font-size: 5em;
 }
+div.benefits_description{
+  padding: 0 60px;
+}
 
 span.benefits_description{
-  font-size: 1.3em;
+  font-size: 1.7em;
 }
