@@ -20,3 +20,34 @@ button.btn-lg > a {
   color: #fff;
   font-size: 30px;
 }
+div.features-wrap{
+  background-image: url("../images/ufc.jpg"); background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 500px;
+  border-bottom: solid 3px red;
+}
+div#onlineStreaming{
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+div.benefitsImage{
+  padding: 20px;
+  position: relative;
+
+}
+div.benefitsImage > img{
+  width: 350px;
+  height: auto;
+}
+@media (max-width: @screen-xs-max) {
+  div.features-wrap{
+    background-color: red;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+    border-bottom: solid 3px red;
+  }
+}

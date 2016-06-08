@@ -1,3 +1,4 @@
+
 div.learnMoreButton{
   position: relative;
   top: 180px;
@@ -19,4 +20,22 @@ div.learnMoreButton{
 button.btn-lg > a {
   color: #fff;
   font-size: 30px;
+}
+div#products{
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, rgb(44, 22, 227), rgb(98, 33, 219)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, rgb(44, 22, 227), rgb(98, 33, 219)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, rgb(44, 22, 227), rgb(98, 33, 219)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, rgb(44, 22, 227), rgb(98, 33, 219)); /* Standard syntax */
+}
+
+div.feature-container{
+  background: transparent;
+}
+h2.feature-title{
+  font-size: 5em;
+}
+
+span.benefits_description{
+  font-size: 1.3em;
 }

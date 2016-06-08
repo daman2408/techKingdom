@@ -109,21 +109,21 @@ div.jumbotron{
   color: #fff;
   text-shadow: 1px 1px 6px rgba(230, 14, 14, 0.81);
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(41, 50, 251, 0.4);
   border-radius: 0px;
   margin: 50px 0 0 0;
   height: 755px;
   width: 100%;
 }
 .jumbotron > div > h1{
-  font-size: 54px ;
+  font-size: 4em;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 900;
 }
 div.item > img{
   width: 100%;
 }
 div.container-fluid#products{
-  border-top: 2px solid red;
-  border-bottom: 2px solid red;
   padding-top: 45px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.75);
@@ -155,6 +155,8 @@ span.title{
 div.product_image{
   height: 245px;
   width: 275px;
+  position: relative;
+  left: 25px;
 }
 ul.buttons{
   list-style: none;
@@ -260,8 +262,11 @@ div.carousel-controls{
   background-color: transparent;
 
 }
-i{
-  color: red;
+i#android{
+  color: white;
+}
+i#tv{
+  color: rgb(44, 22, 227);
 }
 
 i#prevImage{
@@ -412,11 +417,10 @@ span.feature {
   text-align: left;
 }
 
-footer{
+/*footer{
   position: relative;
-  border-top: 1px solid;
   top: 300px;
-}
+}*/
 
 /*// Product Page //*/
 
