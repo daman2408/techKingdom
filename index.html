@@ -10,6 +10,7 @@
   <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/products.css">
   <link rel="stylesheet" href="/css/color-theme.css">
   <title>Tech Kingdom</title>
 </head>
@@ -44,9 +45,6 @@
         </nav>
       </header>
   </nav>
-
-  <div ng-view></div>
-
 
         <!--  TEMPALATES -->
         <!--  TEMPALATES -->
@@ -131,7 +129,7 @@
                     <select name="quantity" id="quantity" ng-model="q"
                             ng-options=" v for v in qtyOpt"></select>
                 </span>
-                <a class="btn btn-sm btn-primary"
+                <a class="btn btn-sm btn-primary w3-theme-l2 w3-hover-theme"
                    ng-click="ngCart.addItem(id, name, price, q, data)"
                    ng-transclude></a>
             </div>
@@ -171,10 +169,9 @@
 
         </script>
 
-</div>
+<div ng-view></div>
   <!-- EXTRA INFO SECTION -->
-  <footer>
-    <div class="container-fluid w3-theme">
+    <div class="container-fluid w3-theme" style="position: relative; margin-top: 15%; margin-bottom: 0;">
       <div class="row">
         <div class="col-xs-3">
           <h6>Our Store</h6>
@@ -192,8 +189,7 @@
         </div>
       </div>
     </div>
-
-  </footer>
+</div>
 
 
 

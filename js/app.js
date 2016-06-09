@@ -46,7 +46,7 @@ app.controller ('myCtrl', ['$scope', '$http', 'ngCart', '$routeParams', function
     },
     {
       name:"Android TV Box",
-      image: "./images/4.jpg",
+      image: "./images/android.png",
       price: 150,
       description: "TVonline+ is our premium IPTV/OTT Android set top box. With our manufacturing business in Honk Kong, R&D business in Korea and a sales office in Toronto, Canada and Los Angeles, USA. Over the past couple of years, we have put together a dedicated team that specializes in the design production and maintenance of our hardware and middleware support for the IPTV/OTT set top boxes we manufacture. We target operators in the market who use and provide dedicated over IP-based networks (IPTV, OTT, VOD). This device comes pre-loaded with our Nova Middleware for easy convenience and deployment for the end-user. With more ram, strong processor it allows you to enhance the velocity of the set top box. The benefits of HEVC technology used in TVonline+ is that it requires smaller network bandwidth for provision of high quality video. TVonline+ comes equipped with a built-in WiFi and the ability to turn the STB into a internet hotspot.",
       productInfo:{  CPU: "Rockchip RK3128t Quad Core ARM Cortex A7 1.3 GHz",

@@ -17,7 +17,7 @@ div.cf{
 }
 
 .fa{
-  color: rgb(237, 59, 59);
+  color: #3010d1;
 }
 img.homePageImage {
     width: 100%;
@@ -145,11 +145,15 @@ div.products{
   position: relative;
   margin: 0 20px;
   text-align: center;
+  overflow: hidden;
 }
 span.title{
   font-size: 18px;
   font-weight: 800;
 
+}
+section{
+  overflow: hidden;
 }
 div.product_image{
   height: 245px;
@@ -163,9 +167,9 @@ ul.buttons{
 div.product_cart_button{
   padding: 10px;
 }
+
 div.product_price{
   border-radius: 50%;
-  background-color: rgba(181, 7, 7, 0.85);
   display: block;
   color: #fff;
   height: 80px;
@@ -203,6 +207,7 @@ div.productLogo{
 
 ul{
   list-style: none;
+  overflow: hidden;
 }
 /*ul.carousel-images{
   width: 1000px;
@@ -421,10 +426,11 @@ span.feature {
   text-align: left;
 }
 
-/*footer{
+footer{
   position: relative;
-  top: 300px;
-}*/
+  margin-top: 15%;
+  margin-bottom: 0;
+}
 
 /*// Product Page //*/
 

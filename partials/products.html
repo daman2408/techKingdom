@@ -1,6 +1,6 @@
 <!-- PRODUCTS -->
 <!-- CART -->
-<div class="container-fluid" id="front-page-products" ng-controller="myCtrl" >
+<div class="container-fluid w3-text-theme" id="front-page-products" ng-controller="myCtrl" >
 <div class="row">
     <div class="col-xs-offset-8 col-xs-4">
       <div class="shoppingCartStatus">
@@ -16,38 +16,21 @@
 </div>
       <hr />
            <!-- <h3>Add to Cart <span>(ngcart-addtocart)</span></h3> -->
-<div class="row">
-  <div class="products">
-    <div class="col-xs-12 col-sm-4" ng-repeat="product in products">
-      <div class="product_name">
-      <span class="title">{{product.name}}</span>
-      </div>
-      <a href="#/details/{{products.indexOf(product)}}">
-        <div class="product_image">
-          <div class="container-fluid">
-            <img class= "homePageImage" ng-src="{{product.image}}">
-          </div>
-        </div>
-      </a>
-      <div class="product_buttons">
-        <ul class="buttons">
-          <li>
-        <div class="product_price">
-          <p class="price" style="top: -40px;">{{product.price | currency}}</p>
-        </div>
-      </li>
-      <li>
-        <div class="product_cart_button">
-          <ngcart-addtocart id="{{product.name}}" name="{{product.name}}" price="{{product.price}}" quantity="1" quantity-max = "5">
-          Add to Cart
-          </ngcart-addtocart>
-        </div>
-      </li>
-      </ul>
-      </div>
+<section class="productz" >
+  <div class="product-card" ng-repeat="product in products">
+    <div class="product-image">
+      <a href="#/details/{{products.indexOf(product)}}"><img ng-src="{{product.image}}"/></a>
+    </div>
+    <div class="product-info">
+      <h5>{{product.name}}</h5>
+      <h6>{{product.price | currency}}</h6>
+    </div>
+    <div class="product-button">
+      <ngcart-addtocart id="{{product.name}}" name="{{product.name}}" price="{{product.price}}" quantity="1" quantity-max = "5">
+      Add to Cart
+      </ngcart-addtocart>
     </div>
   </div>
-
-</div>
-          <a href="#home/cart">Cart</a>
+  <!-- product card close -->
+</section>
 </div>
