@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body{
   font-family: 'Merriweather', serif;
 }
@@ -5,15 +8,10 @@ div.page-wrap{
   margin: 0;
   padding: 0;
   width: 100%;
-  position: relative;
   background: transparent;
 }
 div.cf{
   clear: both;
-}
-
-.container{
-  text-align: center;
 }
 
 .fa{
@@ -88,7 +86,6 @@ div.home-wrap{
   margin: 0;
   padding: 0;
   width: 100%;
-  position: relative;
   background-image: url("../images/television.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -130,8 +127,7 @@ div.container-fluid#products{
 div#front-page-products.container-fluid{
   background-color: white;
   margin: 0;
-  position: relative;
-  top: 50px;
+  padding-top: 50px;
 }
 div.shoppingCartStatus{
   position: relative;
@@ -142,7 +138,6 @@ div.shoppingCartStatus > div{
   padding: 10px;
 }
 div.products{
-  position: relative;
   margin: 0 20px;
   text-align: center;
   overflow: hidden;
@@ -179,164 +174,13 @@ div.product_price{
   line-height: 80px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;
 }
-section.detail_page{
-  margin-top: 50px;
-}
-div.productRating{
-  float: right;
-  position: absolute;
-  top: 15px;
-}
-.small_grey{
-  font-size: 11px;
-  color: rgb(152, 152, 152);
-}
-img.preview{
-  width: 50px;
-  display: inline-block;
-}
-div.container{
-  padding: 0 80px;
-}
-div.productLogo{
-  display: block;
-  width: 500px;
-  overflow: hidden;
-  margin-top: 20px;
-}
 
-ul{
-  list-style: none;
-  overflow: hidden;
-}
-/*ul.carousel-images{
-  width: 1000px;
-  height: 500px;
-  position: relative;
-  padding: 0;
-  margin: 0;
-}*/
-div.carousel-images{
-  width: 500px;
-  position: relative;
-  padding: 0;
-  margin: 0;
-  float: left;
-  display: none;
-  overflow: hidden;
-}
-div.activ{
-  display: block;
-  width: 500px;
-  float: left;
-  position: relative;
-}
-img.slider{
-  width: 500px;
-  height: 500px;
-  float: left;
-  top: 0px;
-  left: 0px;
-  display: inline-block;
-
-}
-
-/*li.carousel-list{
-  list-style: none;
-  width: 500px;
-  float: left;
-  position: relative;
-}
-li.active-slide{
-  display: block;
-}
-img.slide-image{
-  width: 500px;
-}*/
-span.logo{
-  float: left;
-  width: 150px;
-}
-div.carousel-controls{
-  position: absolute;
-  top: 0px;
-  width: 500px;
-  height: 500px;
-  z-index: 1;
-  background-color: transparent;
-
-}
 i.white{
   color: white;
   text-align: center;
 }
 i.fa-6{
   font-size: 15em;
-}
-i#tv{
-  color: rgb(44, 22, 227);
-  text-align: center;
-}
-
-i#prevImage{
-  height: 80px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  width: 42px;
-  border: none;
-  background: transparent;
-  display: none;
-}
-
-i#nextImage{
-  height: 80px;
-  width: 42px;
-  right: -20px;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  border: none;
-  background: transparent;
-  display: none;
-}
-
-div.carousel-counter{
-  margin: 8px 0 12px;
-  width: 500px;
-  text-align: center;
-}
-div.carousel-preview-images{
-  position: relative;
-  padding: 0;
-  margin: 12px 0 0;
-  width: 500px;
-}
-div.carousel-inner-preview{
-  position: relative;
-  top: 0;
-  margin: 0 26px;
-  overflow: hidden;
-  text-align: center;
-  height: 85px;
-}
-ul.preview-images{
-  overflow: hidden;
-  text-align: left;
-  padding: 2px 0 0;
-  display: inline-block;
-  position: relative;
-}
-ul.preview-images > li{
-  cursor: pointer;
-float: left;
-margin: 0 3px;
-position: relative;
-}
-img.preview_slider{
-  width: 73px;
-  display: list-item;
 }
 
 span#priceTag{
@@ -390,8 +234,6 @@ button#addToCart{
 }
 
 div.product-description{
-  position: relative;
-  top: 100px;
   text-align: left;
   margin: 0;
   padding-bottom: 30px;
@@ -427,7 +269,6 @@ span.feature {
 }
 
 footer{
-  position: relative;
   margin-top: 15%;
   margin-bottom: 0;
 }

@@ -1,0 +1,218 @@
+div.mainWrap {
+  padding-top: 100px;
+}
+
+div.productDetails{
+  width:100%;
+}
+div.productCarousel{
+  width: 45%;
+  float:left;
+  margin: 0 35px;
+}
+div.cImage{
+  width:100%;
+}
+div.cImage img{
+  width: 96%;
+  height: auto;
+  margin: 0 auto;
+}
+
+div.productDescription {
+  float: right;
+  width: 45%;
+}
+
+div.buyInfo {
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+div.priceTag {
+  float: left;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: rgb(215, 73, 73);
+}
+
+div.priceTag span {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+div.cartButton {
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+
+button.cart {
+  margin: 0 auto;
+}
+
+div.description {
+  padding: 15px;
+  padding-top: 35px;
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
+
+/*MOBILE SCREEN*/
+
+div.mobile, .mobileDescription, .productImage, .mobileTitle, .info, .mobilePrice, .mobilePriceTag, .mobileCartButton, .cartBox, .addToCart{
+  display: none;
+}
+
+div.productImage img {
+  display: none;
+
+}
+
+div.features {
+  margin: 0 auto;
+}
+
+div.specs {
+  margin: 5% 20px;
+  padding: 0 15px;
+  border: 1px dotted gray;
+  background-color: #f2effe;
+}
+
+div.specs li {
+  font-size: 12px;
+  line-height: 24px;
+}
+/*PHONE SCREEN*/
+@media (max-width: 767px) {
+
+  ol.breadcrumb {
+    font-size: 0.7em;
+  }
+
+  div.titlez {
+    display: none;
+  }
+
+  div.productTitlez, div.productRatingz {
+    display: none;
+    border-bottom: none;
+  }
+
+  div.productCarousel {
+    display: none;
+  }
+
+  div.productDescription {
+    width: 85%;
+    margin: 0 auto;
+    float: none;
+  }
+
+  div.buyInfo {
+    display: none;
+  }
+
+  div.description {
+    padding: 10px;
+    float: none;
+  }
+
+  /*MOBILE SCREEN*/
+
+  div.mobile, .mobileDescription, .productImage, .mobileTitle, .info, .mobilePrice, .mobilePriceTag, .mobileCartButton, .cartBox, .addToCart{
+    display: block;
+  }
+
+  div.productImage img {
+    display: block;
+    width: 100%;
+    padding: 0 5%;
+
+  }
+
+  div.mobileTitle {
+    width: 100%;
+    margin-top: 5%;
+    padding: 0 5%;
+    border-bottom: 2px solid black;
+  }
+
+  span.title {
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  div.info {
+    margin-top: 10px;
+  }
+
+  div.mobilePrice {
+    width: 50%;
+    float: left;
+    border-radius: 5px;
+  }
+
+  div.mobilePriceTag {
+    text-align: center;
+    color: rgb(215, 73, 73);
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  div.mobileCartButton {
+    width: 50%;
+    float: right;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);
+  }
+
+  div.cartBox {
+    background: transparent;
+    padding: 10px 0;
+    border-radius: 5px;
+  }
+
+  span.addToCart {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+}
+
+/*TABLET*/
+
+@media (min-width: 768px ) and (max-width: 1023px){
+body {
+  border: 10px solid #3010d1;
+}
+
+div.productRatingz {
+  display: none;
+}
+
+div.productCarousel {
+  position: relative;
+  float: none;
+  left: 40px;
+  margin: 0 auto;
+  margin-top: 25px;
+  width: 90%;
+  clear: both;
+}
+div.productDescription {
+  position: relative;
+  float: none;
+  margin: 0 auto;
+  padding: 0 5%;
+  width: 90%;
+  clear: both;
+}
+
+
+
+}

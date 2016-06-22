@@ -1,220 +1,174 @@
-<div class="mainWrap" style="background-color: white; position: relative; padding-top: 50px;">
-<div class="container-fluid content-wrap" style="position: relative; top: 50px;">
-      <!-- PRODUCT TITLE -->
-  <div class="container-fluid" style="border-bottom: 2px solid rgb(152, 152, 152);">
-    <div class="row titleBar">
-        <div class="col-xs-9 productName">
-          <div class="productTitle">
-            <h3 style="margin-bottom: 0;">{{products[whichItem].name}}</h3>
-            <span class="small_grey">{{products[whichItem].modelNumber}}</span>
-          </div>
+<div class="mainWrap">
+    <div class="container">
+        <!-- BREADCRUMBS -->
+        <div id="breadcrumb">
+            <ol class="breadcrumb" style="margin-bottom: 5px;">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li class="active">{{products[whichItem].name}}</li>
+            </ol>
         </div>
-        <div class="hidden-xs col-md-3">
-          <div class="productRating" style="display: inline-block;">
-            <span class="small_grey">Rate this product:</span>
-            <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
-          </div>
-          <div style="clear: both;"></div>
-        </div>
-
-      </div>
-      <!-- END OF ROW -->
-    </div>
-    <!-- PRODUCT TITLE BAR ENDS -->
-
-  <!-- MAIN PRODUCT  -->
-  <div class="container-fluid mainProduct">
-    <div class="product-wrapper">
-      <div class="row">
-        <div class="col-xs-12 col-sm-7">
-          <!-- PRODUCT IMAGE/LOGO/CAROUSEL -->
-          <div class="productLogo clear-fix">
-            <span class="logo"><a href="http://avov.tv/"><img
-                     src="https://lh6.googleusercontent.com/-Nekw9YHme20/AAAAAAAAAAI/AAAAAAAAAPw/RYA86SdnzVg/photo.jpg" width="100px" /></a></span>
-             <!-- ng-src="{{products[whichItem].logo}}" -->
-          </div>
-          <div class="carousel-main-wrapper">
-            <div class="carousel-inner-wrap">
-              <div class="carousel-inner" id="idk" style="width: 500px; position: relative;">
-                <div class="image-wrap" style="position: relative; overflow: hidden; width: 500px;">
-                  <div class="carousel-images activ">
-                    <img class="slider" ng-src="{{products[whichItem].image}}" alt="" />
-                    <div class="cf"></div>
-                  </div>
-
-                  <div class="carousel-images">
-                    <img class="slider" src="../images/back.png" alt="" />
-                    <div class="cf"></div>
-                  </div>
-
-                  <div class="carousel-images">
-                    <img class="slider" src="../images/frontrcu.png" alt="" />
-                    <div class="cf"></div>
-                  </div>
-
-                </div>
-
-                <div class="carousel-controls">
-                  <i id="prevImage" class="fa fa-chevron-left fa-2x chevron" aria-hidden="true"></i>
-                  <i id="nextImage" class="fa fa-chevron-right fa-2x chevron" aria-hidden="true"></i>
-                </div>
-                <div class="cf"></div>
-              </div>
-            </div>
-            <div class="carousel-counter">
-              <span class="current">1</span>
-               of
-              <span class="total">2</span>
-            </div>
-            <div class="carousel-preview-images">
-              <div class="carousel-inner-preview">
-                <ul class="preview-images" ng-repeat="product in products">
-                  <li>
-                    <div class="overlay-wrapper">
-                      <img class="preview_slider thumbnail" src="http://electronicspro.ca/images/2_medium.png"/>
+        <!-- PRODUCT DIV -->
+        <div class="productWrap">
+            <div class="row">
+                <div class="col-md-12 titlez" style="border-bottom: 2px solid; overflow: hidden;">
+                    <div class="productTitlez" style="float: left">
+                        <h1>{{products[whichItem].name}}</h1>
                     </div>
-                </li>
-                    <li>
-                      <div class="overlay-wrapper">
-                        <img class="preview_slider thumbnail" src="https://lh6.googleusercontent.com/-Nekw9YHme20/AAAAAAAAAAI/AAAAAAAAAPw/RYA86SdnzVg/photo.jpg"/>
-                      </div>
-                  </li>
-
-                <li>
-                  <div class="overlay-wrapper">
-                    <img class="preview_slider thumbnail" src="http://nerdjunkie.com/i20/wp-content/uploads/2016/04/cfa93663a18c.jpg"/>
-                  </div>
-              </li>
-                </ul>
-              </div>
-              <div class="carousel-preview-controls">
-                <span class="prevArrow"></span>
-                <span class="nextArrow"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-5">
-          <div class="purchase_info clear-fix">
-            <div class="priceInfo">
-              <div class="shipping clear-fix">
-                <span id="shipAndSold">Shipped and Sold by: Tech Kingdom</span>
-              </div>
-              <div>
-                <div class="price" style="float: left; text-align: center; padding: 0 15px; width: 50%">
-                  <span id="priceTag">{{products[whichItem].price | currency}}</span>
+                    <div class="productRatingz" style="float: right; padding-top: 20px;">
+                        <span class="small_grey">Rate this product:</span>
+                        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+                    </div>
                 </div>
-                <div class="clear-fix" style="float: right; padding: 0 15px; width: 50%; border-left: dotted 1px gray">
-                  <ul id="returns">
-                    <li><a href="#">Free Shipping for orders over $200</a></li>
-                    <li><a href="#">Easy Returns</a></li>
-                  </ul>
-                </div>
-  <div style="clear: both;"></div>
-              </div>
             </div>
-            <div class="ad_space" style="text-align: center;">
-              <span id="forAd" style="font-size: 60px;">Ad Space</span>
-            </div>
-            <div class="buyingOptions">
-                <button class="btn btn-primary" id="addToCart" name="button">Add To Cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- CAROUSEL SECTION ENDS -->
-        <!-- PRICE/CART BUTTON ENDS -->
-      </div>
-    </div>
-  </div>
+            <!-- PRODUCT TITLE ENDS -->
 
-  <div class="container product-description" style="overflow: hidden; position: relative; padding-top: 75px;" >
-    <div id="product-description">
-      <h2>Product Description</h2>
-      <ul class="nav nav-tabs">
-        <li class="active" role="presentation"><a data-toggle="tab">Overview</a></li>
-      </ul>
-    <div class="content" style="width: 100%; overflow: scroll;">
-      <div class="tab-content">
-        <div id="overview" class="tab-pane fade in active">
-          <h3>Overview</h3>
-          <h4>{{products[whichItem].name}}</h4>
-          <p>{{products[whichItem].description}}</p>
-          <br>
-          <h3>Features/Specs</h3>
-          <!-- PRODUCT LIST STARTS -->
-          <div class="container-fluid" style="position: relative; top: 15px;">
-            <div class="content-wrapper">
-              <ul id="productList">
-                <li class="row productList alt">
-                  <span class="col-md-5 featureName">CPU</span>
-                  <span class="col-md-7 feature">{{products[whichItem].productInfo.CPU}}</span>
-                </li>
-                <li class="row productList">
-                  <span class="col-md-5 featureName">Feature Name</span>
-                  <span class="col-md-7 feature">Feature</span>
-                </li>
-                <li class="row productList alt">
-                  <span class="col-md-5 featureName">Feature Name</span>
-                  <span class="col-md-7 feature">Feature</span>
-                </li>
-                <li class="row productList">
-                  <span class="col-md-5 featureName">Feature Name</span>
-                  <span class="col-md-7 feature">Feature</span>
-                </li>
-              </ul>
-              <div class="cf"></div>
+            <!-- PRODUCT CAROUSEL/DESCRIPTION BOX -->
+            <div class="row">
+                <div class="productDetails">
+                    <div class="productCarousel">
+                        <div class="cImage">
+                            <img src="../images/avov-front.png" alt="" />
+                        </div>
+                        <div class="cImage">
+                            <img src="../images/back2.png" alt="" />
+                        </div>
+                        <div class="cImage">
+                            <img src="../images/Capture12.png" alt="" />
+                        </div>
+                    </div>
+                    <!-- CAROUSEL ENDS -->
+
+                    <!-- MOBILE SCREEN STARTS -->
+                    <div class="container mobile">
+                        <div class="mobileDescription">
+                            <div class="productImage">
+                                <!-- <img ng-src="{{products[whichItem].image}}" alt="" /> -->
+                                <img src="../images/avov-front.png" alt="Avov Box" />
+                            </div>
+                            <div class="mobileTitle">
+                                <span class="title">Avov IPTV Box</span>
+                            </div>
+                            <div class="info">
+                                <div class="mobilePrice">
+                                    <div class="mobilePriceTag">
+                                        $150.00
+                                    </div>
+                                </div>
+                                <div class="mobileCartButton">
+                                    <div class="cartBox">
+                                        <a href="#"><span class="addToCart">Add To Cart</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MOBILE SCREEN ENDS -->
+
+                    <!-- PRODUCT DESCRIPTION BOX -->
+                    <div class="container ">
+                        <div class="productDescription">
+                            <div class="buyInfo">
+                                <div class="priceTag">
+                                    <span class="price">$150.00</span>
+                                </div>
+                                <div class="cartButton">
+                                    <button type="button" name="button" class="cart btn btn-danger btn-lg">Add To Cart</button>
+                                </div>
+
+                            </div>
+
+                            <div class="description">
+                                <h3>Product Description</h3>
+                                <p>
+                                    TVonline+ is our premium IPTV/OTT Android set top box. With our manufacturing business in Honk Kong, R&D business in Korea and a sales office in Toronto, Canada and Los Angeles, USA. Over the past couple of years, we have put together a dedicated team
+                                    that specializes in the design production and maintenance of our hardware and middleware support for the IPTV/OTT set top boxes we manufacture. We target operators in the market who use and provide dedicated over IP-based
+                                    networks (IPTV, OTT, VOD). This device comes pre-loaded with our Nova Middleware for easy convenience and deployment for the end-user. With more ram, strong processor it allows you to enhance the velocity of the set
+                                    top box. The benefits of HEVC technology used in TVonline+ is that it requires smaller network bandwidth for provision of high quality video. TVonline+ comes equipped with a built-in WiFi and the ability to turn the
+                                    STB into a internet hotspot.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LARGE SCREEN DESCRIPTION ENDS -->
+                </div>
             </div>
-          </div>
-  <!-- PRODUCT LIST ENDS -->
-        </div>
+            <div class="container features">
+                <div class="row features">
+                    <div class="col-md-12">
+                        <div>
+                            <h3>Specifications</h3>
+                        </div>
+                    </div>
+                    <div class="row features">
+                        <div class="col-md-12">
+                            <span>Please note: there will be no subscriptions, activations, TV channels or any other audio/video content provided with this unit. If you want to activate the box with a subscription that we currently offer, click here!. If you want to activate with someone else, that is fine too!</span>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="specs">
+                                <h5>Tech:</h5>
+                                <ul>
+                                    <li>1.5 GHz Processor</li>
+                                    <li>Quad-core processor able to handle all the operation with ease</li>
+                                    <li>Wireless Conectivity</li>
+                                    <li>4GB Internal Storage</li>
+                                    <li>Airplay, Miracast and DLNA support to share content between different devices and your TV seamlessly</li>
+                                    <li>Key updates for Android and internal system to keep you up to date</li>
+                                    <li>Multiple Language Support</li>
+                                    <li>Full Support for Kodi</li>
+                                </ul>
+                                <h5>Specs:</h5>
+                                <ul>
+                                    <li>Amlogic-Quad Core Cortex 1.5GHz A5 Processor</li>
+                                    <li>Size: 130mm x 80mm x 22mm</li>
+                                    <li>GPU: GPU Quad-Core Mali 450 (Open GL ES2.0/1.1, Open VG1.1, Flash 11.1)</li>
+                                    <li>Memory: 1G DDR3</li>
+                                    <li>Internal Storage: 4GB NAND Flash</li>
+                                    <li>Wifi Connectivity: 802.11 b/g/n Wi-Fi</li>
+                                    <li>OS: Android Kitkat 4.4.2</li>
+                                    <li>Video Output: HDMI 1.4a/CVBS, Full HD 1080p, 3D movie file format supported</li>
+                                    <li>Audio Output: HDMI 1.4a, CVBS Audio</li>
+                                    <li>Peripheral Interface: RJ-45 Ethernet jack(10/100Mbps) – Supports Hotspot Sharing Via Wi-FiSD/MMC Card Reader (SD3.0, MMC V4.41)USB 2.0 port x 2 Each Port Provide Max 500mA 2.4GHz IR Receiver (Built-in, Remote Included)</li>
+                                    <li>Security: Hardware Unique ID Supported. AES Challenge Protection Supported</li>
+                                    <li>Power: DC 5V, 2a Adapter Included</li>
+                                    <li>Supported Language: English, Czech, Danish,Dutch, Spanish, French, German, Greek, Italian, Japanese, Korean, Norwegian,Polish, Portuguese, Russian, Swedish, Turkish, Chinese</li>
+                                    <li>OTA: OTA Updates Pushed From Server</li>
+                                    <li>IPTV: IPTV Middleware</li>
+                                    <li>Dolby Supported: Optional AC3, AC3 Supported</li>
+                                </ul>
+                                <h5>What's In The Box:</h5>
+                                <ul>
+                                    <li>TVonline+ set-top box</li>
+                                    <li>IR remote control</li>
+                                    <li>HDMI cable</li>
+                                    <li>Power Supply</li>
+                                    <li>Owner's Manual</li>
+                                </ul>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-    <div class="cf"></div>
-  </div>
-<!-- // Product Description Ends -->
+
 </div>
-<script type="text/javascript">
-$(document).ready(function(){
-  $('.carousel-inner').mouseenter(function(){
-    $(".chevron").fadeIn(1000);
-  }).mouseleave(function(){
-    $('.chevron').fadeOut(1000);
-  });
-  $('.carousel-counter').click(function() {
-    console.log("hello there");
-  });
-  $('#nextImage').click(function() {
+</div>
 
-    var currentSlide = $('.activ');
-    var nextSlide = currentSlide.next();
-
-    if(nextSlide.length == 0) {
-      nextSlide = $('.carousel-images').first();
-    }
-
-    currentSlide.removeClass('activ');
-    nextSlide.addClass('activ');
-  });
-
-  $('#prevImage').click(function() {
-
-    var currentSlide = $('.activ');
-    var prevSlide = currentSlide.prev();
-
-    if(prevSlide.length == 0) {
-      prevSlide = $('.carousel-images').last();
-    }
-
-    currentSlide.removeClass('activ');
-    prevSlide.addClass('activ');
-  });
-
-});
-
+<script>
+    $(document).ready(function() {
+        $('.productCarousel').slick({
+            arrows: true,
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    });
 </script>
