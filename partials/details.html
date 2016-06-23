@@ -4,7 +4,7 @@
         <div id="breadcrumb">
             <ol class="breadcrumb" style="margin-bottom: 5px;">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
+                <li><a href="#/products">Products</a></li>
                 <li class="active">{{products[whichItem].name}}</li>
             </ol>
         </div>
@@ -32,13 +32,13 @@
                 <div class="productDetails">
                     <div class="productCarousel">
                         <div class="cImage">
-                            <img src="../images/avov-front.png" alt="" />
+                          <img ng-src="{{products[whichItem].image[0]}}" alt="" />
                         </div>
                         <div class="cImage">
-                            <img src="../images/back2.png" alt="" />
+                        <img id="secondImage" ng-src="{{products[whichItem].image[1]}}" alt="" />
                         </div>
                         <div class="cImage">
-                            <img src="../images/Capture12.png" alt="" />
+                          <img id="thirdImage" ng-src="{{products[whichItem].image[2]}}" alt="" />
                         </div>
                     </div>
                     <!-- CAROUSEL ENDS -->
@@ -47,16 +47,15 @@
                     <div class="container mobile">
                         <div class="mobileDescription">
                             <div class="productImage">
-                                <!-- <img ng-src="{{products[whichItem].image}}" alt="" /> -->
-                                <img src="../images/avov-front.png" alt="Avov Box" />
+                                <img ng-src="{{products[whichItem].image[0]}}" alt="" />
                             </div>
                             <div class="mobileTitle">
-                                <span class="title">Avov IPTV Box</span>
+                                <span class="title">{{products[whichItem].name}}</span>
                             </div>
                             <div class="info">
                                 <div class="mobilePrice">
                                     <div class="mobilePriceTag">
-                                        $150.00
+                                        {{products[whichItem].price | currency}}
                                     </div>
                                 </div>
                                 <div class="mobileCartButton">
@@ -74,7 +73,7 @@
                         <div class="productDescription">
                             <div class="buyInfo">
                                 <div class="priceTag">
-                                    <span class="price">$150.00</span>
+                                    <span class="price">{{products[whichItem].price | currency}}</span>
                                 </div>
                                 <div class="cartButton">
                                     <button type="button" name="button" class="cart btn btn-danger btn-lg">Add To Cart</button>
@@ -85,11 +84,7 @@
                             <div class="description">
                                 <h3>Product Description</h3>
                                 <p>
-                                    TVonline+ is our premium IPTV/OTT Android set top box. With our manufacturing business in Honk Kong, R&D business in Korea and a sales office in Toronto, Canada and Los Angeles, USA. Over the past couple of years, we have put together a dedicated team
-                                    that specializes in the design production and maintenance of our hardware and middleware support for the IPTV/OTT set top boxes we manufacture. We target operators in the market who use and provide dedicated over IP-based
-                                    networks (IPTV, OTT, VOD). This device comes pre-loaded with our Nova Middleware for easy convenience and deployment for the end-user. With more ram, strong processor it allows you to enhance the velocity of the set
-                                    top box. The benefits of HEVC technology used in TVonline+ is that it requires smaller network bandwidth for provision of high quality video. TVonline+ comes equipped with a built-in WiFi and the ability to turn the
-                                    STB into a internet hotspot.
+                                    {{products[whichItem].description}}
                                 </p>
                             </div>
                         </div>
@@ -110,16 +105,15 @@
                         </div>
                         <div class="col-md-12">
                             <div class="specs">
-                                <h5>Tech:</h5>
-                                <ul>
-                                    <li>1.5 GHz Processor</li>
+                                <ul ng-repeat = "x in products[whichItem].productInfo">
+                                    <!-- <li>1.5 GHz Processor</li>
                                     <li>Quad-core processor able to handle all the operation with ease</li>
                                     <li>Wireless Conectivity</li>
                                     <li>4GB Internal Storage</li>
                                     <li>Airplay, Miracast and DLNA support to share content between different devices and your TV seamlessly</li>
                                     <li>Key updates for Android and internal system to keep you up to date</li>
                                     <li>Multiple Language Support</li>
-                                    <li>Full Support for Kodi</li>
+                                    <li>Full Support for Kodi</li> -->
                                 </ul>
                                 <h5>Specs:</h5>
                                 <ul>

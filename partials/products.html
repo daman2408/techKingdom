@@ -12,7 +12,7 @@
       <section class="productz">
           <div class="product-card" ng-repeat="product in products">
               <div class="product-image">
-                  <a href="#/details/{{products.indexOf(product)}}"><img ng-src="{{product.image}}" /></a>
+                  <a href="#/details/{{products.indexOf(product)}}"><img ng-src="{{product.image[0]}}" /></a>
               </div>
               <div class="product-info">
                   <h4>{{product.name}}</h4>

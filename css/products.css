@@ -38,7 +38,7 @@ div.page_wrap {
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 767px) and (max-width: 1024px) {
   .product-card {
     flex: 1 96%;
   }

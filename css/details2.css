@@ -19,6 +19,14 @@ div.cImage img{
   margin: 0 auto;
 }
 
+#secondImage {
+  padding-top: 30%;
+}
+
+#thirdImage {
+  padding-top: 30%;
+}
+
 div.productDescription {
   float: right;
   width: 45%;
