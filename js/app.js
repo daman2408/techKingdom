@@ -11,14 +11,22 @@ app.config(['$routeProvider', function($routeProvider) {
         templateUrl: '../partials/cart.html',
         controller: 'myCtrl'
     }).
+
     when('/details/:itemId', {
         templateUrl: '../partials/details.html',
         controller: 'myCtrl'
     }).
+
     when('/:products', {
         templateUrl: '../partials/products.html',
         controller: 'myCtrl'
     }).
+
+    when('/contact/:contactUs', {
+        templateUrl: '../partials/contact.html',
+        controller: 'myCtrl'
+    }).
+
     otherwise({
         redirectTo: '/home'
     });
@@ -27,9 +35,12 @@ app.config(['$routeProvider', function($routeProvider) {
 app.controller('myCtrl', ['$scope', '$http', 'ngCart', '$routeParams', function($scope, $http, ngCart, $routeParams) {
     ngCart.setTaxRate(13.0);
     ngCart.setShipping(2.99);
-    $scope.itemsPage = $routeParams.products
+    $scope.itemsPage = $routeParams.products;
     $scope.cart = $routeParams.cart;
     $scope.whichItem = $routeParams.itemId;
+    $scope.contactUs = $routeParams.contactUs;
+    $scope.aboutUs = $routeParams.aboutUs;
+
     $scope.payPalSettings = {
         paypal: {
             business: "damanvir32@gmail.com",

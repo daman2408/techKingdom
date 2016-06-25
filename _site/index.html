@@ -1,234 +1,250 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="techKingdom">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="/css/color-theme.css">
-  <title>Tech Kingdom</title>
+    <!-- drawer.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/css/drawer.min.css">
+    <link rel="stylesheet" href="slick-1.6.0/slick/slick.css">
+    <link rel="stylesheet" href="slick-1.6.0/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/details2.css">
+    <link rel="stylesheet" href="/css/color-theme.css">
+    <title>Tech Kingdom</title>
 </head>
-<body data-spy="scroll" data-target="#example" class="drawer drawer--right">
-  <div class="container-fluid page-wrap">
-    <!-- DESKTOP NAVIGATION -->
-    <nav class="navbar navbar-default navbar-fixed-top hidden-xs hidden-sm w3-theme-l1">
-        <div class="navbar-header">
-          <a href="#" class="navbar-brand w3-theme-l1">TechKingdom</a>
-        </div>
-        <ul class="nav navbar-nav navbar-justified desktopNav">
-          <li ><a href="#" class="w3-theme-l1">Home</a></li>
-          <li><a href="#/products" class="w3-theme-l1">Shop</a></li>
-          <li><a href="#/contact" class="w3-theme-l1">Contact</a></li>
-          <li><a href="#/aboutUs" class="w3-theme-l1">About Us</a></li>
-        </ul>
-    </nav>
-  <!-- MOBILE NAV -->
-  <nav class="navbar navbar-default navbar-fixed-top hidden-md hidden-lg w3-theme-l1">
-      <header role="banner" id="menu-bar" class="hidden-md hidden-lg">
-            <button type="button" class="drawer-toggle drawer-hamburger">
-              <span class="sr-only">toggle navigation</span>
-            <span class="drawer-hamburger-icon"></span>
-        </button>
-        <nav class="drawer-nav w3-theme-d2" role="navigation">
-          <ul class="drawer-menu">
-            <li><a class="drawer-brand" href="#">TechKingdom</a></li>
-            <li><a class="drawer-menu-item" href="#/products">Products</a></li>
-            <li><a class="drawer-menu-item" href="#">About Us</a></li>
-            <li><a href="#" class="drawer-menu-item">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-  </nav>
 
-  <div ng-view></div>
-
-
-        <!--  TEMPALATES -->
-        <!--  TEMPALATES -->
-        <!--  TEMPALATES -->
-
-        <script type="text/ng-template" id="template/ngCart/summary.html"><div class="row">
-
-            <div class="col-md-6">{{ ngCart.getTotalItems() }}
-                <ng-pluralize count="ngCart.getTotalItems()" when="{1: 'item', 'other':'items'}"></ng-pluralize>
-                <br />{{ ngCart.totalCost() | currency }}
+<body data-spy="scroll" data-target="#example" class="drawer drawer--left">
+    <div class="container-fluid page-wrap">
+        <!-- DESKTOP NAVIGATION -->
+        <nav class="navbar navbar-default navbar-fixed-top hidden-xs hidden-sm w3-theme-l1">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand w3-theme-l1">
+                    <img id="logo" src="images/tech_kingdom_logo.png" style="width: 50px;" alt="Tech Kingdom" />
+                </a>
             </div>
-        </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-justified desktopNav">
+                    <li><a href="#" class="w3-theme-l1">Home</a></li>
+                    <li><a href="#/products" class="w3-theme-l1">Shop</a></li>
+                    <li><a href="#contact/contactUs" class="w3-theme-l1">Contact</a></li>
+                    <li><a href="#about/aboutUs" class="w3-theme-l1">About</a></li>
+                </ul>
+                <a href="#home/cart" style="color: #fff;"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true" style="float:right; color:#fff; margin: 0 15px;"></i></a>
+            </div>
+
+        </nav>
+        <!-- MOBILE NAV -->
+        <nav class="navbar navbar-default navbar-fixed-top hidden-md hidden-lg w3-theme-l1">
+            <header role="banner" id="menu-bar" class="hidden-md hidden-lg">
+                <button type="button" class="drawer-toggle drawer-hamburger">
+                    <span class="sr-only">toggle navigation</span>
+                    <span class="drawer-hamburger-icon"></span>
+                </button>
+                <ul class="nav navbar-nav navbar-right" style="float:right; margin: 0 -15px; display: inline;">
+                    <li style="display: inline">
+                        <a href="#home/cart" style="color: #fff;">
+                            <ngcart-summary>
+                            </ngcart-summary>
+                        </a>
+                    </li>
+                </ul>
+                <nav class="drawer-nav w3-theme-d2" role="navigation">
+                    <ul class="drawer-menu">
+                        <li><a class="drawer-brand" href="#">TechKingdom</a></li>
+                        <li><a class="drawer-menu-item" href="#/products">Products</a></li>
+                        <li><a class="drawer-menu-item" href="#/aboutUs">About Us</a></li>
+                        <li><a href="#/contactUs" class="drawer-menu-item">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </nav>
+
+        <!--  TEMPALATES -->
+        <!--  TEMPALATES -->
+        <!--  TEMPALATES -->
+
+        <script type="text/ng-template" id="template/ngCart/summary.html">
+            <div class="row">
+
+                <div class="col-md-6">{{ ngCart.getTotalItems() }}
+                    <ng-pluralize count="ngCart.getTotalItems()" when="{1: 'item', 'other':'items'}"></ng-pluralize>
+                    <br />{{ ngCart.totalCost() | currency }}
+                </div>
+            </div>
         </script>
 
 
         <script type="text/ng-template" id="template/ngCart/cart.html">
-        <div class="alert alert-warning" role="alert" ng-show="ngCart.getTotalItems() === 0">
-            Your cart is empty
-        </div>
+            <div class="alert alert-warning" role="alert" ng-show="ngCart.getTotalItems() === 0">
+                Your cart is empty
+            </div>
 
-        <div class="table-responsive col-lg-12" ng-show="ngCart.getTotalItems() > 0">
+            <div class="table-responsive col-lg-12" ng-show="ngCart.getTotalItems() > 0">
 
-            <table class="table table-striped ngCart cart">
+                <table class="table table-striped ngCart cart">
 
-                <thead>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th>Quantity</th>
-                    <th>Amount</th>
-                    <th>Total</th>
-                </tr>
-                </thead>
-                <tfoot>
-                <tr ng-show="ngCart.getTax()">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Tax ({{ ngCart.getTaxRate() }}%):</td>
-                    <td>{{ ngCart.getTax() | currency }}</td>
-                </tr>
-                <tr ng-show="ngCart.getShipping()">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Shipping:</td>
-                    <td>{{ ngCart.getShipping() | currency }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Total:</td>
-                    <td>{{ ngCart.totalCost() | currency }}</td>
-                </tr>
-                </tfoot>
-                <tbody>
-                <tr ng-repeat="item in ngCart.getCart().items track by $index">
-                    <td><span ng-click="ngCart.removeItemById(item.getId())" class="glyphicon glyphicon-remove"></span></td>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>Quantity</th>
+                            <th>Amount</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr ng-show="ngCart.getTax()">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Tax ({{ ngCart.getTaxRate() }}%):</td>
+                            <td>{{ ngCart.getTax() | currency }}</td>
+                        </tr>
+                        <tr ng-show="ngCart.getShipping()">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Shipping:</td>
+                            <td>{{ ngCart.getShipping() | currency }}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Total:</td>
+                            <td>{{ ngCart.totalCost() | currency }}</td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr ng-repeat="item in ngCart.getCart().items track by $index">
+                            <td><span ng-click="ngCart.removeItemById(item.getId())" class="glyphicon glyphicon-remove"></span></td>
 
-                    <td>{{ item.getName() }}</td>
-                    <td><span class="glyphicon glyphicon-minus" ng-class="{'disabled':item.getQuantity()==1}"
-                              ng-click="item.setQuantity(-1, true)"></span>&nbsp;&nbsp;
-                        {{ item.getQuantity() | number }}&nbsp;&nbsp;
-                        <span class="glyphicon glyphicon-plus" ng-click="item.setQuantity(1, true)"></span></td>
-                    <td>{{ item.getPrice() | currency}}</td>
-                    <td>{{ item.getTotal() | currency }}</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+                            <td>{{ item.getName() }}</td>
+                            <td><span class="glyphicon glyphicon-minus" ng-class="{'disabled':item.getQuantity()==1}" ng-click="item.setQuantity(-1, true)"></span>&nbsp;&nbsp; {{ item.getQuantity() | number }}&nbsp;&nbsp;
+                                <span class="glyphicon glyphicon-plus" ng-click="item.setQuantity(1, true)"></span></td>
+                            <td>{{ item.getPrice() | currency}}</td>
+                            <td>{{ item.getTotal() | currency }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
         </script>
 
-        <script type="text/ng-template" id="template/ngCart/addtocart.html"><div ng-hide="attrs.id">
-            <a class="btn btn-lg btn-primary" ng-disabled="true" ng-transclude></a>
+        <script type="text/ng-template" id="template/ngCart/addtocart.html">
+            <div ng-hide="attrs.id">
+                <a class="btn btn-lg btn-primary" ng-disabled="true" ng-transclude></a>
 
-        </div>
-        <div ng-show="attrs.id">
-            <div>
-                <span ng-show="quantityMax">
+            </div>
+            <div ng-show="attrs.id">
+                <div>
+                    <span ng-show="quantityMax">
                     <select name="quantity" id="quantity" ng-model="q"
                             ng-options=" v for v in qtyOpt"></select>
                 </span>
-                <a class="btn btn-sm btn-primary"
-                   ng-click="ngCart.addItem(id, name, price, q, data)"
-                   ng-transclude></a>
+                    <a class="btn btn-sm btn-primary w3-theme-l2 w3-hover-theme" ng-click="ngCart.addItem(id, name, price, q, data)" ng-transclude></a>
+                </div>
+                <mark ng-show="inCart()">
+                    This item is in your cart. <a ng-click="ngCart.removeItemById(id)" style="cursor: pointer;">Remove</a>
+                </mark>
             </div>
-            <mark  ng-show="inCart()">
-                This item is in your cart. <a ng-click="ngCart.removeItemById(id)" style="cursor: pointer;">Remove</a>
-            </mark>
-        </div>
         </script>
 
         <script type="text/ng-template" id="template/ngCart/checkout.html">
 
-        <div ng-if="service=='http' || service == 'log'">
-            <button class="btn btn-primary" ng-click="checkout()" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</button>
-        </div>
+            <div ng-if="service=='http' || service == 'log'">
+                <button class="btn btn-primary" ng-click="checkout()" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</button>
+            </div>
 
 
-        <div ng-if="service=='paypal'">
+            <div ng-if="service=='paypal'">
 
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" ng-show="ngCart.getTotalItems()">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="{{ settings.paypal.business }}">
-                <input type="hidden" name="lc" value="CA">
-                <input type="hidden" name="item_name" value="{{ settings.paypal.item_name }}">
-                <input type="hidden" name="item_number" value="{{ settings.paypal.item_number }}">
-                <input type="hidden" name="amount" value="{{ ngCart.getSubTotal()}}">
-                <input type="hidden" name="currency_code" value="{{ settings.paypal.currency_code }}">
-                <input type="hidden" name="button_subtype" value="services">
-                <input type="hidden" name="no_note" value="0">
-                <input type="hidden" name="tax_rate" value="{{ ngCart.getTaxRate()}}">
-                <input type="hidden" name="shipping" value="{{ ngCart.getShipping()}}">
-                <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" ng-show="ngCart.getTotalItems()">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="{{ settings.paypal.business }}">
+                    <input type="hidden" name="lc" value="CA">
+                    <input type="hidden" name="item_name" value="{{ settings.paypal.item_name }}">
+                    <input type="hidden" name="item_number" value="{{ settings.paypal.item_number }}">
+                    <input type="hidden" name="amount" value="{{ ngCart.getSubTotal()}}">
+                    <input type="hidden" name="currency_code" value="{{ settings.paypal.currency_code }}">
+                    <input type="hidden" name="button_subtype" value="services">
+                    <input type="hidden" name="no_note" value="0">
+                    <input type="hidden" name="tax_rate" value="{{ ngCart.getTaxRate()}}">
+                    <input type="hidden" name="shipping" value="{{ ngCart.getShipping()}}">
+                    <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
 
-        </div>
+            </div>
 
         </script>
 
-</div>
-  <!-- EXTRA INFO SECTION -->
-  <footer>
-    <div class="container-fluid w3-theme">
-      <div class="row">
-        <div class="col-xs-3">
-          <h6>Our Store</h6>
-          <ul style="list-style: none;">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+        <div ng-view></div>
+        <!-- EXTRA INFO SECTION -->
+        <div class="container-fluid w3-theme">
+            <div class="row">
+                <div class="col-xs-3">
+                    <h6>Our Store</h6>
+                    <ul style="list-style: none;">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                    <h6>Quick Links</h6>
+                    <ul style="list-style: none;">
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-xs-3">
-          <h6>Quick Links</h6>
-          <ul style="list-style: none;">
-            <li></li>
-          </ul>
-        </div>
-      </div>
     </div>
 
-  </footer>
 
 
 
-
-<!-- Scripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- angularjs -->
-<script src="node_modules/angular/angular.js"></script>
-<script src="node_modules/angular-route/angular-route.js">
-</script>
-<script src="node_modules/angular-animate/angular-animate.min.js">
-</script>
-<!-- ngCart -->
-<script src="bower_components/ngCart/dist/ngCart.js"></script>
-<!-- bootstrap js -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!-- drawer.css -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/css/drawer.min.css">
-<!-- iScroll -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
-<!-- drawer.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/js/drawer.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-  $('.drawer').drawer();
-});
-</script>
-
-
-<!-- MODULE -->
-<script src="js/app.js"></script>
-
-
-
-
-
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="slick-1.6.0/slick/slick.min.js"></script>
+    <!-- angularjs -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js">
+    </script>
+    <script src="node_modules/angular-animate/angular-animate.min.js">
+    </script>
+    <!-- ngCart -->
+    <script src="bower_components/ngCart/dist/ngCart.js"></script>
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- iScroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+    <!-- drawer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/js/drawer.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.drawer').drawer();
+            $('.productCarousel').slick({
+                arrows: true,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+    <!-- MODULE -->
+    <script src="js/app.js"></script>
 </body>
+
 </html>

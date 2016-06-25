@@ -3,6 +3,7 @@
 }
 body{
   font-family: 'Merriweather', serif;
+  color: #3010d1;
 }
 div.page-wrap{
   margin: 0;
@@ -10,6 +11,7 @@ div.page-wrap{
   width: 100%;
   background: transparent;
 }
+
 div.cf{
   clear: both;
 }
@@ -101,13 +103,13 @@ width: 100%;
 .container .jumbotron, .container-fluid .jumbotron{
   border-radius: 0px;
 }
-div.jumbotron{
+div.frontPage{
   color: #fff;
   text-shadow: 1px 1px 6px rgba(230, 14, 14, 0.81);
   text-align: center;
   background: rgba(41, 50, 251, 0.4);
   border-radius: 0px;
-  margin: 50px 0 0 0;
+  padding: 50px 0 0 0;
   height: 755px;
   width: 100%;
 }
@@ -128,6 +130,7 @@ div#front-page-products.container-fluid{
   background-color: white;
   margin: 0;
   padding-top: 100px;
+  padding-bottom: 17%;
 }
 div.shoppingCartStatus{
   position: relative;
@@ -285,4 +288,11 @@ div.container.content-wrap{
   padding: 0;
   margin: 0;
   }
+}
+
+/*CART PAGE*/
+
+div.ShoppingCart-wrap {
+  padding: 0 30px;
+  padding-top: 50px;
 }

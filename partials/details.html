@@ -58,10 +58,10 @@
                                         {{products[whichItem].price | currency}}
                                     </div>
                                 </div>
-                                <div class="mobileCartButton">
-                                    <div class="cartBox">
-                                        <a href="#"><span class="addToCart">Add To Cart</span></a>
-                                    </div>
+                                <div class="product-button">
+                                    <ngcart-addtocart id="{{products[whichItem].name}}" name="{{products[whichItem].name}}" price="{{products[whichItem].price}}" quantity="1" quantity-max="5">
+                                        Add to Cart
+                                    </ngcart-addtocart>
                                 </div>
                             </div>
                         </div>
@@ -75,8 +75,10 @@
                                 <div class="priceTag">
                                     <span class="price">{{products[whichItem].price | currency}}</span>
                                 </div>
-                                <div class="cartButton">
-                                    <button type="button" name="button" class="cart btn btn-danger btn-lg">Add To Cart</button>
+                                <div class="product-button">
+                                    <ngcart-addtocart id="{{products[whichItem].name}}" name="{{products[whichItem].name}}" price="{{products[whichItem].price}}" quantity="1" quantity-max="5">
+                                        Add to Cart
+                                    </ngcart-addtocart>
                                 </div>
 
                             </div>

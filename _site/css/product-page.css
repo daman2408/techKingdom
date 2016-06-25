@@ -1,4 +1,4 @@
-div.productRating{
+/*div.productRating{
   float: right;
   position: absolute;
   top: 15px;
@@ -159,7 +159,7 @@ cursor: pointer;
     display: block;
 }*/
 
-span#priceTag{
+/*span#priceTag{
   font-size: 16px;
   color: red;
   font-style: bold;
@@ -217,4 +217,4 @@ div.container.content-wrap{
   padding: 0;
   margin: 0;
   }
-}
+}*/
