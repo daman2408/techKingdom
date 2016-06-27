@@ -27,11 +27,6 @@ app.config(['$routeProvider', function($routeProvider) {
         controller: 'myCtrl'
     }).
 
-    when('about/:aboutUs', {
-        templateUrl: '../partials/about.html',
-        controller: 'myCtrl'
-    }).
-
     otherwise({
         redirectTo: '/home'
     });

@@ -1,15 +1,11 @@
 div.mainWrap {
   padding-top: 60px;
 }
-
 .breadcrumb {
-  background-color: #f2effe;
-}
+  background-color: transparent;
+  padding: 0;
 
-.breadcrumb a {
-  color: #3010d1;
 }
-
 div.productDetails{
   width:100%;
 }
@@ -72,8 +68,9 @@ div.description {
   padding: 15px;
   padding-top: 35px;
   line-height: 1.5em;
-  font-size: 1.2em;
 }
+
+
 
 /*MOBILE SCREEN*/
 
@@ -88,13 +85,13 @@ div.productImage img {
 
 div.features {
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 div.specs {
   margin: 5% 20px;
   padding: 0 15px;
   border: 1px dotted gray;
-  background-color: #f2effe;
 }
 
 div.specs li {

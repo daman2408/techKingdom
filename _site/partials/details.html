@@ -1,8 +1,8 @@
 <div class="mainWrap">
     <div class="container">
         <!-- BREADCRUMBS -->
-        <div id="breadcrumb">
-            <ol class="breadcrumb" style="margin-bottom: 5px;">
+        <div id="breadcrumb w3-theme-light">
+            <ol class="breadcrumb " style="margin-bottom: 5px;">
                 <li><a href="#">Home</a></li>
                 <li><a href="#/products">Products</a></li>
                 <li class="active">{{products[whichItem].name}}</li>
@@ -72,7 +72,7 @@
                     <div class="container ">
                         <div class="productDescription">
                             <div class="buyInfo">
-                                <div class="priceTag">
+                                <div class="priceTag w3-text-theme">
                                     <span class="price">{{products[whichItem].price | currency}}</span>
                                 </div>
                                 <div class="product-button">
@@ -84,10 +84,12 @@
                             </div>
 
                             <div class="description">
+                              <div class="effect6">
                                 <h3>Product Description</h3>
                                 <p>
                                     {{products[whichItem].description}}
                                 </p>
+                              </div>
                             </div>
                         </div>
                     </div>
@@ -106,7 +108,7 @@
                             <span>Please note: there will be no subscriptions, activations, TV channels or any other audio/video content provided with this unit. If you want to activate the box with a subscription that we currently offer, click here!. If you want to activate with someone else, that is fine too!</span>
                         </div>
                         <div class="col-md-12">
-                            <div class="specs">
+                            <div class="specs w3-theme-light">
                                 <ul ng-repeat = "x in products[whichItem].productInfo">
                                     <!-- <li>1.5 GHz Processor</li>
                                     <li>Quad-core processor able to handle all the operation with ease</li>

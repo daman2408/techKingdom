@@ -2,8 +2,7 @@
   box-sizing: border-box;
 }
 body{
-  font-family: 'Merriweather', serif;
-  color: #3010d1;
+  font-family: 'Roboto', sans-serif;
 }
 div.page-wrap{
   margin: 0;
@@ -16,9 +15,22 @@ div.cf{
   clear: both;
 }
 
-.fa{
-  color: #3010d1;
+.drawer-hamburger-icon, .drawer-hamburger-icon:after, .drawer-hamburger-icon:before {
+  background-color: #fff;
 }
+
+.drawer-menu {
+  padding-top: 25px;
+}
+
+.drawer-menu li {
+  padding: 10px 0;
+}
+
+.drawer-brand, .drawer-menu-item {
+  font-size: 1.6em;
+}
+
 img.homePageImage {
     width: 100%;
     height: auto;
@@ -105,25 +117,24 @@ width: 100%;
 }
 div.frontPage{
   color: #fff;
-  text-shadow: 1px 1px 6px rgba(230, 14, 14, 0.81);
+  text-shadow: 1px 1px 6px #d0af04;
   text-align: center;
-  background: rgba(41, 50, 251, 0.4);
+  background: rgba(107, 192, 252, 0.6);
   border-radius: 0px;
   padding: 50px 0 0 0;
+  margin-bottom: 0;
   height: 755px;
   width: 100%;
 }
 .jumbotron > div > h1{
 font-size: 4em;
-font-family: 'Montserrat', sans-serif;
-font-weight: 900;
+font-weight: 700;
 }
 div.item > img{
   width: 100%;
 }
 div.container-fluid#products{
   padding-top: 45px;
-  text-align: center;
   background-color: rgba(255, 255, 255, 0.75);
 }
 div#front-page-products.container-fluid{

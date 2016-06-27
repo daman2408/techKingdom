@@ -23,17 +23,24 @@ button.btn-lg > a {
 }
 div#products{
   background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, rgb(44, 22, 227), rgb(98, 33, 219)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, rgb(44, 22, 227), rgb(98, 33, 219)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, rgb(44, 22, 227), rgb(98, 33, 219)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, rgb(44, 22, 227), rgb(98, 33, 219)); /* Standard syntax */
+  background: -webkit-linear-gradient(left top, #c3e5fe, #0591f5); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #c3e5fe, #0591f5); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #c3e5fe, #0591f5); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #c3e5fe, #0591f5); /* Standard syntax */
 }
 
 div.feature-container{
   background: transparent;
   color: #fff;
-  padding: 30px;
+  padding: 15px;
   text-align: center;
+}
+div#smartTV {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #daefff, #ffed8f); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #daefff, #ffed8f); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #daefff, #ffed8f); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #daefff, #ffed8f); /* Standard syntax */
 }
 div.title{
   position: relative;
@@ -43,9 +50,16 @@ h2.feature-title{
   font-size: 5em;
 }
 div.benefits_description{
-  padding: 0 60px;
+  padding: 0 10px;
+  text-align: left;
+  line-height: 2em;
 }
 
 span.benefits_description{
   font-size: 1.7em;
+}
+
+div.feature-list > ul > li {
+  font-size: 1.7em;
+  line-height: 1.5em;
 }
