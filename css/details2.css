@@ -107,7 +107,7 @@ div.specs li {
 @media (max-width: 767px) {
 
   ol.breadcrumb {
-    font-size: 0.7em;
+    padding-top: 50px;
   }
 
   div.titlez {
