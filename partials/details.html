@@ -54,7 +54,7 @@
                             </div>
                             <div class="info">
                                 <div class="mobilePrice">
-                                    <div class="mobilePriceTag">
+                                    <div class="mobilePriceTag w3-text-theme">
                                         {{products[whichItem].price | currency}}
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@
                     <!-- MOBILE SCREEN ENDS -->
 
                     <!-- PRODUCT DESCRIPTION BOX -->
-                    <div class="container ">
+                    <div class="container">
                         <div class="productDescription">
                             <div class="buyInfo">
                                 <div class="priceTag w3-text-theme">
@@ -100,12 +100,12 @@
                 <div class="row features">
                     <div class="col-md-12">
                         <div>
-                            <h3>Specifications</h3>
+                            <h3>Additional Information</h3>
                         </div>
                     </div>
                     <div class="row features">
                         <div class="col-md-12">
-                            <span>Please note: there will be no subscriptions, activations, TV channels or any other audio/video content provided with this unit. If you want to activate the box with a subscription that we currently offer, click here!. If you want to activate with someone else, that is fine too!</span>
+                            <p>{{products[whichItem].info}}</p>
                         </div>
                     </div>
                 </div>

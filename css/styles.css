@@ -117,7 +117,7 @@ width: 100%;
 }
 div.frontPage{
   color: #fff;
-  text-shadow: 1px 1px 6px #d0af04;
+  text-shadow: 1px 1px 6px rgb(32, 32, 32);
   text-align: center;
   background: rgba(107, 192, 252, 0.6);
   border-radius: 0px;
