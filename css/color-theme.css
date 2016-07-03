@@ -1,24 +1,26 @@
-.w3-theme-l5 {color:#000 !important; background-color:#f6fbff !important}
-.w3-theme-l4 {color:#000 !important; background-color:#e1f2fe !important}
-.w3-theme-l3 {color:#000 !important; background-color:#c3e5fe !important}
-.w3-theme-l2 {color:#000 !important; background-color:#a5d8fd !important}
-.w3-theme-l1 {color:#000 !important; background-color:#87ccfd !important}
-.w3-theme-d1 {color:#fff !important; background-color:#46b0fb !important}
-.w3-theme-d2 {color:#fff !important; background-color:#23a1fb !important}
-.w3-theme-d3 {color:#fff !important; background-color:#0591f5 !important}
-.w3-theme-d4 {color:#fff !important; background-color:#047cd2 !important}
-.w3-theme-d5 {color:#fff !important; background-color:#0468af !important}
+.w3-theme-l5 {color:#000 ; background-color:#f6fbff }
+.w3-theme-l4 {color:#000 ; background-color:#e1f2fe }
+.w3-theme-l3 {color:#000 ; background-color:#c3e5fe }
+.w3-theme-l2 {color:#000 ; background-color:#a5d8fd }
+.w3-theme-l1 {color:#000 ; background-color:#87ccfd }
+.w3-theme-d1 {color:#fff ; background-color:#46b0fb }
+.w3-theme-d2 {color:#fff ; background-color:#23a1fb }
+.w3-theme-d3 {color:#fff ; background-color:#0591f5 }
+.w3-theme-d4 {color:#fff ; background-color:#047cd2 }
+.w3-theme-d5 {color:#fff ; background-color:#0468af }
+.w3-theme-d6 {color:#fff ; background-color:#034777 }
 
-.w3-theme-light {color:#000 !important; background-color:#f6fbff !important}
-.w3-theme-dark {color:#fff !important; background-color:#0468af !important}
-.w3-theme-action {color:#fff !important; background-color:#0468af !important}
+.w3-theme-light {color:#000 ; background-color:#f6fbff }
+.w3-theme-dark {color:#fff ; background-color:#0468af }
+.w3-theme-action {color:#fff ; background-color:#0468af }
 
-.w3-theme {color:#000 !important; background-color:#6bc0fc !important}
-.w3-text-theme {color:#0591f5 !important}
-.w3-theme-border {border-color:#6bc0fc !important}
-.w3-hover-theme:hover {color:#000 !important; background-color:#6bc0fc !important}
+.w3-theme {color:#000 ; background-color:#0468af}
+.w3-text-theme {color:#0591f5 }
+.w3-text-theme-d {color: #0468af}
+.w3-theme-border {border-color:#6bc0fc }
+.w3-hover-theme:hover {color:#000 ; background-color:#6bc0fc }
 
 .w3-theme-nav {
-  background-color: rgba(35,161,251, 0.4) !important;
+  background-color: rgba(35,161,251, 0.4) ;
   color: #fff;
 }

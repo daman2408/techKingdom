@@ -1,5 +1,5 @@
 
-div.learnMoreButton{
+.learnMoreButton{
   position: relative;
   top: 180px;
 }
@@ -23,28 +23,63 @@ button.btn-lg > a {
 }
 div#products{
   background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, #c3e5fe, #0591f5); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, #c3e5fe, #0591f5); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, #c3e5fe, #0591f5); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, #c3e5fe, #0591f5); /* Standard syntax */
+  background: -webkit-linear-gradient(to top, #244a66, #0677c7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(to top, #244a66, #0677c7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(to top, #244a66, #0677c7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top, #244a66, #0677c7); /* Standard syntax */
 }
 
-div.feature-container{
+.feature-container{
   background: transparent;
   color: #fff;
-  padding: 15px;
+  padding: 65px 15px;
+  text-align: center;
 }
-div.title{
+
+div#smartTV {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top, #daefff, #ffed8f); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom , #daefff, #ffed8f); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom , #daefff, #ffed8f); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom , #bee2ff, #fff); /* Standard syntax */
+}
+.homeTitle{
   position: relative;
   top: 150px;
 }
 h2.feature-title{
   font-size: 5em;
+
 }
-div.benefits_description{
-  padding: 0 10px;
+.benefits_description{
+  padding: 0 35px;
+  text-align: left;
+  line-height: 2em;
 }
 
-span.benefits_description{
+.feature-info{
   font-size: 1.7em;
+}
+
+.feature-list > ul > li {
+  font-size: 1.7em;
+  line-height: 1.5em;
+}
+
+/*MOBILE SCREEN*/
+@media (max-width: 425px) {
+  .homeTitle {
+    padding: 25px;
+    top: 80px;
+  }
+}
+
+/*TABLET SCREEN*/
+@media (min-width: 768px ) and (max-width: 1023px){
+  .navbar-right {
+    margin: 0;
+  }
+  .col-md-6 {
+    padding-left: 0;
+  }
 }

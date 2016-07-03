@@ -4,14 +4,17 @@
 body{
   font-family: 'Roboto', sans-serif;
 }
-div.page-wrap{
+h1, h2, h3, p, a, ul, li, span {
+  font-family: 'Roboto', sans-serif;
+}
+.page-wrap{
   margin: 0;
   padding: 0;
   width: 100%;
   background: transparent;
 }
 
-div.cf{
+.cf{
   clear: both;
 }
 
@@ -38,21 +41,25 @@ img.homePageImage {
 .navbar-default {
     background-color: rgba(0, 0, 0, 0.8);
     border: none;
-    color: red;
 }
-ul.desktopNav > li > a{
-  color: white;
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: transparent;
 }
 /*#mobile{
   background-color: rgba(255, 255, 255, 0.95);
 }*/
-div.dropdown.pull-right{
+.dropdown.pull-right{
   right: 30px;
 }
 .drawer-hamburger{
   margin-right: 12px;
 }
-div.round{
+.round{
   background-color: rgb(221, 50, 50);
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
@@ -62,7 +69,7 @@ button#links{
   border-color: transparent;
 }
 
-div.menu > ul{
+.menu > ul{
   position: fixed;
   top: 52px;
   right: -375px;
@@ -76,27 +83,23 @@ div.menu > ul{
 
 }
 
-div.menu > ul > li{
+.menu > ul > li{
     text-align: left;
 }
-div.menu > ul > li > a{
+.menu > ul > li > a{
   color: #fff;
 }
 
-nav.drawer-nav{
-  background-color: rgba(0, 0, 0, 0.8);
+.drawer-nav{
+  background-color: rgba(4, 74, 124, 0.89);
 
-}
-a.drawer-brand{
+}.drawer-brand{
+  color: #fff;
+}.drawer-menu-item{
   color: #fff;
 }
-a.drawer-menu-item{
-  color: #fff;
-}
-span.drawer-hamburger-icon{
-  color: red;
-}
-div.home-wrap{
+
+.home-wrap{
   margin: 0;
   padding: 0;
   width: 100%;
@@ -107,7 +110,7 @@ div.home-wrap{
 
 
 }
-div.container-fluid#main{
+.container-fluid#main{
 margin: 0;
 padding: 0;
 width: 100%;
@@ -115,11 +118,11 @@ width: 100%;
 .container .jumbotron, .container-fluid .jumbotron{
   border-radius: 0px;
 }
-div.frontPage{
+.frontPage{
   color: #fff;
   text-shadow: 1px 1px 6px rgb(32, 32, 32);
   text-align: center;
-  background: rgba(107, 192, 252, 0.6);
+  background: rgba(7, 112, 187, 0.72);
   border-radius: 0px;
   padding: 50px 0 0 0;
   margin-bottom: 0;
@@ -128,12 +131,12 @@ div.frontPage{
 }
 .jumbotron > div > h1{
 font-size: 4em;
-font-weight: 700;
+font-weight: 300;
 }
-div.item > img{
+.item > img{
   width: 100%;
 }
-div.container-fluid#products{
+.container-fluid#products{
   padding-top: 45px;
   background-color: rgba(255, 255, 255, 0.75);
 }
@@ -143,15 +146,15 @@ div#front-page-products.container-fluid{
   padding-top: 100px;
   padding-bottom: 17%;
 }
-div.shoppingCartStatus{
+.shoppingCartStatus{
   position: relative;
   float: right;
 }
-div.shoppingCartStatus > div{
+.shoppingCartStatus > div{
   display: inline-block;
   padding: 10px;
 }
-div.products{
+.products{
   margin: 0 20px;
   text-align: center;
   overflow: hidden;
@@ -164,7 +167,7 @@ span.title{
 section{
   overflow: hidden;
 }
-div.product_image{
+.product_image{
   height: 245px;
   width: 275px;
   position: relative;
@@ -173,11 +176,11 @@ div.product_image{
 ul.buttons{
   list-style: none;
 }
-div.product_cart_button{
+.product_cart_button{
   padding: 10px;
 }
 
-div.product_price{
+.product_price{
   border-radius: 50%;
   display: block;
   color: #fff;
@@ -206,7 +209,7 @@ span#shipAndSold{
   position: relative;
   top: 50%;
 }
-div.purchase_info{
+.purchase_info{
   margin: 20px auto;
   position: relative;
   top: 100px;
@@ -215,7 +218,7 @@ div.purchase_info{
   float: right;
   overflow: visible;
 }
-div.shipping{
+.shipping{
   position: relative;
   width: 100%;
   height: 50px;
@@ -225,7 +228,7 @@ div.shipping{
   padding-bottom: 24px;
   text-align: center;
 }
-div.price{
+.price{
   height: 100%;
 }
 span#priceTag{
@@ -236,7 +239,7 @@ ul#returns{
   list-style: circle;
   padding-left: 30px;
 }
-div.cart{
+.cart{
   position: relative;
 }
 button#addToCart{
@@ -247,7 +250,7 @@ button#addToCart{
 
 }
 
-div.product-description{
+.product-description{
   text-align: left;
   margin: 0;
   padding-bottom: 30px;
@@ -258,7 +261,7 @@ div#product-description{
   margin: 0;
   position: static;
 }
-div.content{
+.content{
   text-align: left;
 }
 
@@ -283,8 +286,23 @@ span.feature {
 }
 
 footer{
-  margin-top: 15%;
-  margin-bottom: 0;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+}
+
+}
+footer .footerList {
+  display: inline;
+  list-style: none;
+
+}
+footer .footerListIcons {
+  display: inline;
+  list-style: none;
+  margin-right: 10px;
 }
 
 /*// Product Page //*/
@@ -292,10 +310,10 @@ footer{
 
 
 @media (min-width: @screen-sm-min) {
-  div.container{
+  .container{
     padding: 0;
   }
-div.container.content-wrap{
+.container.content-wrap{
   padding: 0;
   margin: 0;
   }
@@ -303,7 +321,7 @@ div.container.content-wrap{
 
 /*CART PAGE*/
 
-div.ShoppingCart-wrap {
+.ShoppingCart-wrap {
   padding: 0 30px;
   padding-top: 50px;
 }

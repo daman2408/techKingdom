@@ -15,16 +15,15 @@
                     <div class="productTitlez" style="float: left">
                         <h1>{{products[whichItem].name}}</h1>
                     </div>
-                    <div class="productRatingz" style="float: right; padding-top: 20px;">
-                        <span class="small_grey">Rate this product:</span>
-                        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
-                        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
-                        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
-                        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
-                        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
-                    </div>
+                </div>
+                <div class="col-md-12" style="padding: 30px 0 0 10px">
+                  <span>Product Rating:</span>
+                  <div >
+                      <ul class="el"></ul>
+                  </div>
                 </div>
             </div>
+
             <!-- PRODUCT TITLE ENDS -->
 
             <!-- PRODUCT CAROUSEL/DESCRIPTION BOX -->
@@ -54,7 +53,7 @@
                             </div>
                             <div class="info">
                                 <div class="mobilePrice">
-                                    <div class="mobilePriceTag w3-text-theme">
+                                    <div class="mobilePriceTag w3-text-theme-d">
                                         {{products[whichItem].price | currency}}
                                     </div>
                                 </div>
@@ -72,7 +71,7 @@
                     <div class="container">
                         <div class="productDescription">
                             <div class="buyInfo">
-                                <div class="priceTag w3-text-theme">
+                                <div class="priceTag w3-text-theme-d">
                                     <span class="price">{{products[whichItem].price | currency}}</span>
                                 </div>
                                 <div class="product-button">
@@ -115,7 +114,12 @@
 
 </div>
 </div>
-
+<script type="text/javascript">
+  var el = document.querySelector('.el');
+  var currentRating = 0;
+  var maxRating = 5;
+  var myRating = rating(el, currentRating, maxRating);
+</script>
 <script>
     $(document).ready(function() {
         $('.productCarousel').slick({

@@ -5,13 +5,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- BootStrap CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
     <!-- drawer.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/css/drawer.min.css">
+    <link rel="stylesheet" href="node_modules/jquery-drawer/dist/css/drawer.min.css">
+
+    <!-- slick.css -->
     <link rel="stylesheet" href="slick-1.6.0/slick/slick.css">
     <link rel="stylesheet" href="slick-1.6.0/slick/slick-theme.css">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:100,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,100' rel='stylesheet' type='text/css'>
+
+    <!-- rating -->
+    <link rel="stylesheet" href="bower_components/five-star-rating/css/rating.min.css">
+
+    <!-- custom css styles -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/products.css">
@@ -21,27 +33,27 @@
     <title>Tech Kingdom</title>
 </head>
 
-<body data-spy="scroll" data-target="#example" class="drawer drawer--left w3-text-theme">
+<body data-spy="scroll" data-target="#example" class="drawer drawer--left w3-text-theme-d">
     <div class="container-fluid page-wrap">
         <!-- DESKTOP NAVIGATION -->
-        <nav class="navbar navbar-default navbar-fixed-top hidden-xs hidden-sm w3-theme-d3">
+        <nav class="navbar navbar-default navbar-fixed-top hidden-xs hidden-sm w3-theme-d6">
             <div class="navbar-header">
-                <a href="#" class="navbar-brand w3-theme-d3">
+                <a href="#" class="navbar-brand">
                     <img id="logo" src="images/tech_kingdom_logo.png" style="width: 50px;" alt="Tech Kingdom" />
                 </a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-justified desktopNav">
-                    <li><a href="#" class="w3-theme-d3">Home</a></li>
-                    <li><a href="#/products" class="w3-theme-d3">Shop</a></li>
-                    <li><a href="#contact/contactUs" class="w3-theme-d3">Contact</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#/products" >Shop</a></li>
+                    <li><a href="#contact/contactUs">Contact</a></li>
                 </ul>
                 <a href="#home/cart" style="color: #fff;"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true" style="float:right; color:#fff; margin: 0 15px;"></i></a>
             </div>
 
         </nav>
         <!-- MOBILE NAV -->
-        <nav class="navbar navbar-default navbar-fixed-top hidden-md hidden-lg w3-theme-d3">
+        <nav class="navbar navbar-default navbar-fixed-top hidden-md hidden-lg w3-theme-d6">
             <header role="banner" id="menu-bar" class="hidden-md hidden-lg">
                 <button type="button" class="drawer-toggle drawer-hamburger">
                     <span class="sr-only">toggle navigation</span>
@@ -49,17 +61,17 @@
                 </button>
                 <ul class="nav navbar-nav navbar-right" style="float:right; margin: 0 -15px; display: inline;">
                     <li style="display: inline">
-                        <a href="#home/cart" style="color: #fff;">
+                        <a href="#home/cart" style="color: #fff; margin-right: 12px;">
                             <ngcart-summary>
                             </ngcart-summary>
                         </a>
                     </li>
                 </ul>
-                <nav class="drawer-nav w3-theme-nav" role="navigation">
+                <nav class="drawer-nav" role="navigation">
                     <ul class="drawer-menu">
                         <li><a class="drawer-brand" href="#">TechKingdom</a></li>
                         <li><a class="drawer-menu-item" href="#/products">Products</a></li>
-                        <li><a href="#/contactUs" class="drawer-menu-item">Contact</a></li>
+                        <li><a href="#contact/contactUs" class="drawer-menu-item">Contact</a></li>
                     </ul>
                 </nav>
             </header>
@@ -187,25 +199,22 @@
         </script>
 
         <div ng-view></div>
-        <!-- EXTRA INFO SECTION -->
-        <div class="container-fluid w3-theme-d3">
-            <div class="row">
-                <div class="col-xs-3">
-                    <h6>Our Store</h6>
-                    <ul style="list-style: none;">
-                        <li></li>
-                        <li></li>
-                        <li></li>
+        <!-- FOOTER -->
+        <footer class="w3-theme-d6">
+          <div class="" style="float: left;padding-top: 8px;">
+            <ul style="list-style:none;display:inline;padding-top: 15px; margin-bottom: 0;">
+              <li class="footerListIcons"><i class="fa fa-copyright" aria-hidden="true"></i></li>
+              <li class="footerListIcons">Tech Kingdom</li>
+            </ul>
+          </div>
+                  <div class="" style="float: right;">
+                    <ul style="list-style:none;display:inline;padding-top: 15px; margin-bottom: 0;">
+                      <li class="footerListIcons"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></li>
+                      <li class="footerListIcons"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+                      <li class="footerListIcons"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></li>
                     </ul>
-                </div>
-                <div class="col-xs-3">
-                    <h6>Quick Links</h6>
-                    <ul style="list-style: none;">
-                        <li></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                  </div>
+        </footer>
     </div>
 
 
@@ -226,6 +235,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
     <!-- drawer.js -->
     <script src="node_modules/jquery-drawer/dist/js/drawer.min.js"></script>
+    <!-- rating -->
+    <script src="bower_components/five-star-rating/js/dist/rating.min.js"></script>
+
     <script>
         $(document).ready(function() {
             $('.drawer').drawer();

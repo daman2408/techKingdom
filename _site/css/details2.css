@@ -1,4 +1,4 @@
-div.mainWrap {
+.mainWrap {
   padding-top: 60px;
 }
 .breadcrumb {
@@ -6,42 +6,49 @@ div.mainWrap {
   padding: 0;
 
 }
-div.productDetails{
+.productDetails{
   width:100%;
 }
-div.productCarousel{
+/*STAR RATING UL*/
+.el {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.productCarousel{
   width: 45%;
   float:left;
   margin: 0 35px;
 }
-div.cImage{
+.cImage{
   width:100%;
 }
-div.cImage img{
+.cImage img{
   width: 96%;
   height: auto;
   margin: 0 auto;
 }
 
 #secondImage {
-  padding-top: 30%;
+  padding-top: 10%;
 }
 
 #thirdImage {
-  padding-top: 30%;
+  padding-top: 10%;
 }
 
-div.productDescription {
+.productDescription {
   float: right;
   width: 45%;
 }
 
-div.buyInfo {
+.buyInfo {
   margin-top: 30px;
   overflow: hidden;
 }
 
-div.priceTag {
+.priceTag {
   float: left;
   width: 50%;
   height: 100%;
@@ -49,12 +56,12 @@ div.priceTag {
   color: #3010d1;
 }
 
-div.priceTag span {
+.priceTag span {
   font-size: 2em;
   font-weight: 600;
 }
 
-div.cartButton {
+.cartButton {
   float: right;
   width: 50%;
   height: 100%;
@@ -64,37 +71,41 @@ button.cart {
   margin: 0 auto;
 }
 
-div.description {
+.description {
   padding: 15px;
   padding-top: 35px;
   line-height: 1.5em;
-  font-size: 1.2em;
+}
+
+.features {
+  font-size: 1.1em;
 }
 
 
 
 /*MOBILE SCREEN*/
 
-div.mobile, .mobileDescription, .productImage, .mobileTitle, .info, .mobilePrice, .mobilePriceTag, .mobileCartButton, .cartBox, .addToCart{
+.mobile, .mobileDescription, .productImage, .mobileTitle, .info, .mobilePrice, .mobilePriceTag, .mobileCartButton, .cartBox, .addToCart{
   display: none;
 }
 
-div.productImage img {
+.productImage img {
   display: none;
 
 }
 
-div.features {
+.features {
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 
-div.specs {
+.specs {
   margin: 5% 20px;
   padding: 0 15px;
   border: 1px dotted gray;
 }
 
-div.specs li {
+.specs li {
   font-size: 12px;
   line-height: 24px;
 }
@@ -102,93 +113,100 @@ div.specs li {
 @media (max-width: 767px) {
 
   ol.breadcrumb {
-    font-size: 0.7em;
+    padding-top: 50px;
   }
 
-  div.titlez {
+  .titlez {
     display: none;
   }
 
-  div.productTitlez, div.productRatingz {
+  .productTitlez, .productRatingz {
     display: none;
     border-bottom: none;
   }
 
-  div.productCarousel {
+  .productCarousel {
     display: none;
   }
 
-  div.productDescription {
+  .productDescription {
     width: 85%;
     margin: 0 auto;
     float: none;
   }
 
-  div.buyInfo {
+  .buyInfo {
     display: none;
   }
 
-  div.description {
+  .description {
     padding: 10px;
     float: none;
-    font-size: 0.8em;
+    border-bottom: 2px solid #0468af;
+    font-size: 1.1em;
   }
 
-  div.features {
-    font-size: 0.8em;
+  .features {
+    font-size: 15.4px;
+    line-height: 23.1px;
   }
+
+
 
   /*MOBILE SCREEN*/
 
-  div.mobile, .mobileDescription, .productImage, .mobileTitle, .info, .mobilePrice, .mobilePriceTag, .mobileCartButton, .cartBox, .addToCart{
+  .mobile, .mobileDescription, .productImage, .mobileTitle, .info, .mobilePrice, .mobilePriceTag, .mobileCartButton, .cartBox, .addToCart{
     display: block;
   }
 
-  div.productImage img {
+  .mobileDescription {
+    margin: 0 auto;
+  }
+
+  .productImage img {
     display: block;
     width: 100%;
     padding: 0 5%;
 
   }
 
-  div.mobileTitle {
-    width: 100%;
+  .mobileTitle {
+    width: 85%;
+    margin: 0 auto;
     margin-top: 5%;
-    padding: 0 5%;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #0468af;
   }
 
   span.title {
     font-size: 2em;
-    font-weight: 600;
+    font-weight: bold;
   }
 
-  div.info {
+  .info {
     margin-top: 10px;
   }
 
-  div.mobilePrice {
+  .mobilePrice {
     width: 50%;
     float: left;
     border-radius: 5px;
   }
 
-  div.mobilePriceTag {
+  .mobilePriceTag {
     text-align: center;
-    color: #3010d1;
     padding: 10px 0;
     font-size: 16px;
     font-weight: 600;
   }
 
-  div.mobileCartButton {
+  .mobileCartButton {
     width: 50%;
     float: right;
     text-align: center;
     background: linear-gradient(to bottom, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);
   }
 
-  div.cartBox {
+  .cartBox {
     background: transparent;
     padding: 10px 0;
     border-radius: 5px;
@@ -205,24 +223,24 @@ div.specs li {
 /*TABLET*/
 
 @media (min-width: 768px ) and (max-width: 1023px){
-body {
-  border: 10px solid #3010d1;
+
+.breadcrumb {
+  padding-top: 25px;
 }
 
-div.productRatingz {
+.productRatingz {
   display: none;
 }
 
-div.productCarousel {
+.productCarousel {
   position: relative;
   float: none;
-  left: 40px;
   margin: 0 auto;
   margin-top: 25px;
   width: 90%;
   clear: both;
 }
-div.productDescription {
+.productDescription {
   position: relative;
   float: none;
   margin: 0 auto;
