@@ -51,6 +51,15 @@ img.homePageImage {
     color: #fff;
     background-color: transparent;
 }
+.navHover {
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+.navHover:hover{
+  background-color: #047cd2;
+
+}
 /*#mobile{
   background-color: rgba(255, 255, 255, 0.95);
 }*/
@@ -355,6 +364,10 @@ div#smartTV {
   position: relative;
   top: 150px;
 }
+.vid {
+  position: relative;
+  top: 150px;
+}
 h2.feature-title{
   font-size: 5em;
 
@@ -374,11 +387,38 @@ h2.feature-title{
   line-height: 1.5em;
 }
 
+.shopNow {
+  transition-property: color, font-size, font-weight;
+  transition-duration: .9s;
+  transition-timing-function: linear;
+}
+.shopNow:hover {
+  color: #0468af;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.youTubeVid {
+  height: 315px;
+  width: 560px;
+}
+
 /*MOBILE SCREEN*/
 @media (max-width: 425px) {
   .homeTitle {
     padding: 25px;
     top: 80px;
+  }
+  .vid {
+    top: 80px;
+  }
+}
+
+@media (max-width: 580px) {
+  .youTubeVid {
+    height: 150px;
+    width: 280px;
   }
 }
 
