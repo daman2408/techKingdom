@@ -389,7 +389,7 @@ h2.feature-title{
 
 .shopNow {
   transition-property: color, font-size, font-weight;
-  transition-duration: .9s;
+  transition-duration: .3s;
   transition-timing-function: linear;
 }
 .shopNow:hover {
