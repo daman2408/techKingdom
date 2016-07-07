@@ -123,7 +123,9 @@ button#links{
 .container-fluid#main{
 margin: 0;
 padding: 0;
+padding-bottom: 45px;
 width: 100%;
+background-color: rgba(7, 112, 187, 0.72);
 }
 .container .jumbotron, .container-fluid .jumbotron{
   border-radius: 0px;
@@ -132,11 +134,10 @@ width: 100%;
   color: #fff;
   text-shadow: 1px 1px 6px rgb(32, 32, 32);
   text-align: center;
-  background: rgba(7, 112, 187, 0.72);
+  background: transparent;
   border-radius: 0px;
   padding: 50px 0 0 0;
   margin-bottom: 0;
-  height: 755px;
   width: 100%;
 }
 .jumbotron > div > h1{
@@ -361,12 +362,10 @@ div#smartTV {
   background: linear-gradient(to bottom , #bee2ff, #fff); /* Standard syntax */
 }
 .homeTitle{
-  position: relative;
-  top: 150px;
+padding-top: 100px;
 }
 .vid {
-  position: relative;
-  top: 150px;
+  padding: 20px;
 }
 h2.feature-title{
   font-size: 5em;
@@ -401,34 +400,41 @@ h2.feature-title{
 
 .youTubeVid {
   height: 315px;
-  width: 560px;
+  width: 500px;
 }
 
 /*MOBILE SCREEN*/
 @media (max-width: 425px) {
   .homeTitle {
-    padding: 25px;
-    top: 80px;
+    padding:0;
+    padding-top: 35px;
+  }
+  .youTubeVid {
+    height: 150px;
+    width: 300px;
   }
   .vid {
-    top: 80px;
+    padding: 10px;
   }
 }
 
-@media (max-width: 580px) {
-  .youTubeVid {
-    height: 150px;
-    width: 280px;
+@media (max-width: 768px) {
+  .container-fluid#main {
+    padding-bottom: 50px;
   }
+
 }
 
 /*TABLET SCREEN*/
-@media (min-width: 768px ) and (max-width: 1023px){
-  .navbar-right {
+@media (min-width: 767px ) and (max-width: 1023px){
+  /*.navbar-right {
     margin: 0;
   }
   .col-md-6 {
     padding-left: 0;
+  }*/
+  #main {
+    padding-bottom: 45px;
   }
 }
 
